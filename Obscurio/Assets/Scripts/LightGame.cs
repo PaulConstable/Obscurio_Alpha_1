@@ -1,33 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LightGame : MonoBehaviour {
 
-    SpriteRenderer button;
-    public Camera cam;
-    public Sprite but;
+    [SerializeField] public Button button;
 
-// Use this for initialization
-void Start () {
-        button = GetComponent<SpriteRenderer>();
-	}
+    public void ChangeColor()
+    {
+        
+
+        var color = button.colors;
+        color.normalColor = Color.red;
+        button.colors = color;
+    }
+
 	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray click = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit connected;
-
-            if(Physics.Raycast(click, out connected))
-            {
-                //Change Colour of sprite 
-                button.color = Color.yellow;
-            }
-        }
-
-
-	}
 }
 
