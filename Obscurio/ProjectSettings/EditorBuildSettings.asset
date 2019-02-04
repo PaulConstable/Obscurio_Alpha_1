@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1.JAB.unity
     guid: e5495e2a4a701384ca6a3656d1b0f700
+  - enabled: 1
+    path: Assets/Scenes/Puzzle-Game.unity
+    guid: c3f7cf50a58c00848bed4f90a5bdf9a1

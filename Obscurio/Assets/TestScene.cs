@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TestScene : MonoBehaviour {
 
     public static bool isLoaded= false;
+    public static GameObject test;
     // Use this for initialization
     void Start () {
 
@@ -22,7 +23,8 @@ public class TestScene : MonoBehaviour {
         if (isLoaded == false)
         {
             isLoaded = true;
-            SceneManager.LoadScene("1.JAB", LoadSceneMode.Additive);
+            SceneManager.LoadScene("Puzzle-Game", LoadSceneMode.Additive);
+            Destroy(gameObject);
 
 
         }
