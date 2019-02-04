@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
     public GameObject[] cards;
 
     private bool initial = false;
-    private int matches = 2;
+    private int matches = 13;
 
 
 	// Use this for initialization
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour {
     {
         for (int i =0; i<2; i++)
         {
-            for (int p =1; p<11; p++)
+            for (int p =1; p<14; p++)
             {
                 bool test = false;
                 int choice = 0;

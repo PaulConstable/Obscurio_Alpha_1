@@ -34,13 +34,13 @@ public class CardFlipGame : MonoBehaviour {
 	
     public void flipCard()
     {
-        if (state == 1)
-        {
-            state = 0;
-        }
-        else if (state ==0)
+        if (state == 0)
         {
             state = 1;
+        }
+        else if (state ==1)
+        {
+            state = 0;
         }
             
                 
