@@ -25,8 +25,8 @@ public class GameManager : MonoBehaviour {
 
         if (Input.GetMouseButtonUp(0))
             checkCards();
-	}
-
+    }
+    
     void initialiseCards()
     {
         for (int i =0; i<2; i++)
@@ -49,7 +49,9 @@ public class GameManager : MonoBehaviour {
             c.GetComponent<CardFlipGame>().createGraphics();
 
         if (!initial)
+        {
             initial = true;
+        }
     }
 
     public Sprite getcardBack()
@@ -87,7 +89,7 @@ void checkCards()
         {
             x = 2;
             matches--;
-            if (matches==0)
+            if (matches==0) //If Game is won
             {
                 Debug.Log("matches complete");
             }
@@ -96,7 +98,7 @@ void checkCards()
         for(int i=0; i<c.Count; i++)
         {
             cards[c [i]].GetComponent<CardFlipGame>().states = x;
-            cards[c[i]].GetComponent<CardFlipGame>().falsecheck();
+            cards[c [i]].GetComponent<CardFlipGame>().falsecheck();
         }
     }
 

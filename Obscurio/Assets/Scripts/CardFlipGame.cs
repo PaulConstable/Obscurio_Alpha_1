@@ -85,6 +85,7 @@ public class CardFlipGame : MonoBehaviour {
             GetComponent<Image>().sprite = cardFront;
             stay = false;
         }
+        
     }
     
     
