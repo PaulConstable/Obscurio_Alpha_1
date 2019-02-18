@@ -79,8 +79,9 @@ public class CardFlipGame : MonoBehaviour {
         if (state == 0)
         {
             GetComponent<Image>().sprite = cardBack;
+            
         }
-        else if(state ==1)
+        if (state == 1)
         {
             GetComponent<Image>().sprite = cardFront;
             stay = false;
