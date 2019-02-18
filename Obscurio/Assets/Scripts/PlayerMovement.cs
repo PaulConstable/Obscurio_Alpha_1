@@ -35,6 +35,12 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.K)) {
             TestScene.isLoaded = false;
         }
+
+       
+
+
+
+
     }
 
 
