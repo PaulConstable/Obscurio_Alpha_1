@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class LibrarianTrigger : MonoBehaviour {
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    [SerializeField] GameObject librarianText;
+    
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
+        
         if(collision.gameObject.tag == "Player")
         {
+            Destroy(collision.gameObject);
             Debug.Log("1");
+            librarianText.SetActive(true);
+            
         }
     }
 }
