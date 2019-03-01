@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class WellWin : MonoBehaviour
 {
     [SerializeField]
@@ -24,8 +24,12 @@ public class WellWin : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Time.timeScale = 0;
+       
         youWin = true;
         winText.SetActive(true);
+        SceneManager.UnloadSceneAsync("Well-Jump_Game");
+ 
+
+
     }
 }
