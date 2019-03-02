@@ -7,6 +7,7 @@ public class BeanGuyTrigger : MonoBehaviour {
     private int speechCheck = 1;
     
     [SerializeField] public GameObject[] beanTexts;
+    public bool text;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -16,6 +17,9 @@ public class BeanGuyTrigger : MonoBehaviour {
             {
                 beanTexts[0].SetActive(true);
                 speechCheck = 2;
+                print("Speech1");
+                
+
             }
 
         }
@@ -27,6 +31,7 @@ public class BeanGuyTrigger : MonoBehaviour {
                 beanTexts[0].SetActive(false);
                 beanTexts[1].SetActive(true);
                 speechCheck = 3;
+                print("Speech2");
             }
         }
 
