@@ -10,8 +10,7 @@ public class WellLose : MonoBehaviour {
 
     public static bool youLose;
 
-    //cached reference
-    WellGameTrigger wellGameTrigger;
+
 
 
     // Use this for initialization
@@ -19,7 +18,7 @@ public class WellLose : MonoBehaviour {
     {
         loseText.SetActive(false);
         youLose = false;
-        wellGameTrigger = FindObjectOfType<WellGameTrigger>();
+
     }
 
     // Update is called once per frame
@@ -34,6 +33,6 @@ public class WellLose : MonoBehaviour {
         youLose = true;
         loseText.SetActive(true);
         SceneManager.UnloadSceneAsync("Well-Jump_Game");
-        wellGameTrigger.isloadedreference();
+        
     }
 }
