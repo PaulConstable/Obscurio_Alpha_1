@@ -62,6 +62,7 @@ public class BeanGuyTrigger : MonoBehaviour
                 beanTexts[3].SetActive(false);
                 beanTexts[4].SetActive(true);
                 WellCheck = true; // Makes WellGamePlayable
+                print(WellCheck);
                 speechCheck = 6;
                 print("Speech2");
             }
