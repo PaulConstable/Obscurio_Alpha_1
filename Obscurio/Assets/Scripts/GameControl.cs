@@ -29,7 +29,14 @@ public class GameControl : MonoBehaviour {
             pictures[5].rotation.z == 0 &&
             pictures[6].rotation.z == 0 &&
             pictures[7].rotation.z == 0 &&
-            pictures[8].rotation.z == 0 )
+            pictures[8].rotation.z == 0 &&
+            pictures[9].rotation.z == 0 &&
+            pictures[10].rotation.z == 0 &&
+            pictures[11].rotation.z == 0 &&
+            pictures[12].rotation.z == 0 &&
+            pictures[13].rotation.z == 0 &&
+            pictures[14].rotation.z == 0 &&
+            pictures[15].rotation.z == 0 )
         {
             youWin = true;
             winText.SetActive(true);
