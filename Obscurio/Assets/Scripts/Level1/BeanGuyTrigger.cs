@@ -9,7 +9,9 @@ public class BeanGuyTrigger : MonoBehaviour
     private int speechCheck = 1;
     public bool WellCheck = false;
     public bool wellGameWon = false;
-    public bool BeanGame = true;
+    public bool BeanGame = false;
+    public bool BeanPlanted = false;
+    public bool PotionGame = false;
 
     [SerializeField] public GameObject[] beanTexts;
     [SerializeField] public GameObject[] SpeechImages;
@@ -26,9 +28,20 @@ public class BeanGuyTrigger : MonoBehaviour
     private void Start()
     {
         BeanGame = true;
+        PotionGame = true;
         FindObjectOfType<WellWin>();
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            EButton.SetActive(true);
+        }
+    }
+
+   
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -40,13 +53,17 @@ public class BeanGuyTrigger : MonoBehaviour
                     LevelSwitch.SetActive(false);
                 
             }
-        }
+            if (Input.GetKeyDown(KeyCode.E) && BeanGame == false)
+            {
+                SceneManager.LoadScene("Puzzle-Game", LoadSceneMode.Additive);
+
+            }
 
         if (collision.gameObject.tag == "Player" && speechCheck == 1)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                
+                EButton.SetActive(false);
                 beanTexts[0].SetActive(true);
                 speechCheck = 2;
                 print("Speech1");
@@ -102,7 +119,7 @@ public class BeanGuyTrigger : MonoBehaviour
                 print("Speech2");
             }
         }
-        else if (collision.gameObject.tag == "Player" && speechCheck == 6 )
+        else if (collision.gameObject.tag == "Player" && speechCheck == 6  && BeanPlanted == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -133,6 +150,7 @@ public class BeanGuyTrigger : MonoBehaviour
                 beanTexts[6].SetActive(false);
                 beanTexts[7].SetActive(true);
                 speechCheck = 9;
+                PotionGame = false;
                 print("Speech2");
             }
         }
@@ -141,6 +159,10 @@ public class BeanGuyTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if(collision.gameObject.tag == "Player")
+        {
+            EButton.SetActive(false);
+        }
         if (collision.gameObject.tag == "Player" && speechCheck == 2)
         {
             beanTexts[0].SetActive(false);
@@ -215,8 +237,22 @@ public class BeanGuyTrigger : MonoBehaviour
         ItemIcons[2].SetActive(true);
     }
 
+    public void RemoveBean()
+    {
+        ItemIcons[0].SetActive(false);
+    }
+    public void RemoveCan()
+    {
+        ItemIcons[1].SetActive(false);
+    }
+
     public void RemoveText()
     {
         beanTexts[3].SetActive(false);
+    }
+
+    public void BeanPlantedfunc()
+    {
+        BeanPlanted = true;
     }
 }

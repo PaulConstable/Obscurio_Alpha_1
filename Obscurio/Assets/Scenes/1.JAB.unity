@@ -195,12 +195,12 @@ GameObject:
   - component: {fileID: 389528058}
   - component: {fileID: 389528059}
   m_Layer: 0
-  m_Name: E ButtonAsset 2
+  m_Name: E-Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &389528058
 Transform:
   m_ObjectHideFlags: 0
@@ -1315,11 +1315,11 @@ MonoBehaviour:
     lineCount: 3
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2376,6 +2376,8 @@ MonoBehaviour:
   WellCheck: 0
   wellGameWon: 0
   BeanGame: 0
+  BeanPlanted: 0
+  PotionGame: 0
   beanTexts:
   - {fileID: 1900531971}
   - {fileID: 511874046}
@@ -4437,11 +4439,11 @@ MonoBehaviour:
     lineCount: 3
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:

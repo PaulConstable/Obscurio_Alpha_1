@@ -7,6 +7,13 @@ public class BeanStalkTrigger : MonoBehaviour {
     [SerializeField] public GameObject[] stalks;
     public int beanState = 0;
 
+    BeanGuyTrigger myBeanGuyTrigger;
+
+    public void Start()
+    {
+        myBeanGuyTrigger = FindObjectOfType<BeanGuyTrigger>();
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player" && beanState ==1)
@@ -14,6 +21,8 @@ public class BeanStalkTrigger : MonoBehaviour {
             if(Input.GetKeyDown(KeyCode.E))
             {
                 stalks[0].SetActive(true);
+                myBeanGuyTrigger.BeanPlantedfunc();
+                myBeanGuyTrigger.RemoveBean();
             }
         }
         if (collision.gameObject.tag == "Player" && beanState == 2)
