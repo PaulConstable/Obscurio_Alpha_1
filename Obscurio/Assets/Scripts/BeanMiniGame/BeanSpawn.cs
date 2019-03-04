@@ -18,11 +18,15 @@ public class BeanSpawn : MonoBehaviour
     public Text beanPlayerScore;
 
     private float playerBeanScore = 0;
+
+    BeanStalkTrigger myBeanStalkTrigger;
+    BeanGuyTrigger myBeanGuyTrigger;
     
     void Start()
     {
 
-        
+        myBeanStalkTrigger = FindObjectOfType<BeanStalkTrigger>();
+        myBeanGuyTrigger = FindObjectOfType<BeanGuyTrigger>();
 
         InvokeRepeating("BlackBeanInstance", spawnTimeBlackBean, spawnTimeBlackBean);
 
@@ -36,29 +40,33 @@ public class BeanSpawn : MonoBehaviour
     {
         beanPlayerScore.text = playerBeanScore + " / 50";
 
-        if (playerBeanScore == 50)
+        if (playerBeanScore >= 20)
         {
-            SceneManager.UnloadSceneAsync("Well-Jump_Game");
+            myBeanStalkTrigger.SetBeanState1();
+            myBeanGuyTrigger.LevelSwitch.SetActive(true);
+            myBeanGuyTrigger.beanTexts[3].SetActive(false);
+            myBeanGuyTrigger.BeanGame = true;
+            SceneManager.UnloadSceneAsync("BeanGame");
         }
     }
     void BlackBeanInstance()
     {
         //var newBlackBean = GameObject.Instantiate(BlackBean);
-        Vector3 position1 = new Vector3(Random.Range(-6.0f, 6.0f), Random.Range(7.0f, 9.0f), Random.Range(-6.0f, 6.0f));
+        Vector3 position1 = new Vector3(Random.Range(-74.0f, -62.0f), Random.Range(7.0f, 9.0f), 13);
         Instantiate(BlackBean, position1, Quaternion.identity);
     }
 
     void RedBeanInstance()
     {
         //var newRedBean = GameObject.Instantiate(RedBean);
-        Vector3 position2 = new Vector3(Random.Range(-6.0f, 6.0f), Random.Range(9.0f, 12.0f), Random.Range(-6.0f, 6.0f));
+        Vector3 position2 = new Vector3(Random.Range(-74.0f, -62.0f), Random.Range(9.0f, 12.0f), 13);
         Instantiate(RedBean, position2, Quaternion.identity);
     }
 
     void GoldBeanInstance()
     {
         //var newGoldBean = GameObject.Instantiate(GoldBean);
-        Vector3 position3 = new Vector3(Random.Range(-6.0f, 6.0f), Random.Range(7.0f, 14.0f), Random.Range(-6.0f, 6.0f));
+        Vector3 position3 = new Vector3(Random.Range(-74.0f, -62.0f), Random.Range(7.0f, 14.0f), 13);
         Instantiate(GoldBean, position3, Quaternion.identity);
     }
 

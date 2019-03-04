@@ -14,10 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzle-Game.unity
     guid: c3f7cf50a58c00848bed4f90a5bdf9a1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Size-Game.unity
     guid: 03bce17bd116b544891df9f5a7a3aa8c
   - enabled: 1
     path: Assets/Scenes/Well-Jump_Game.unity
     guid: 31b977cc2985a934ab7982d1a6e86da1
+  - enabled: 1
+    path: Assets/Scenes/BeanGame.unity
+    guid: 59ec9985520dedc4e8b9f1c313fc3274
   m_configObjects: {}

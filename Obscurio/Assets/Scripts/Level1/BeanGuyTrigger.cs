@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BeanGuyTrigger : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class BeanGuyTrigger : MonoBehaviour
     private int speechCheck = 1;
     public bool WellCheck = false;
     public bool wellGameWon = false;
+    public bool BeanGame = true;
 
     [SerializeField] public GameObject[] beanTexts;
     [SerializeField] public GameObject[] SpeechImages;
@@ -17,15 +19,29 @@ public class BeanGuyTrigger : MonoBehaviour
 
     WellWin myWellWin;
 
+    [SerializeField] public GameObject LevelSwitch;
+
+
 
     private void Start()
     {
+        BeanGame = true;
         FindObjectOfType<WellWin>();
 
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Player")
+        {
+            if (Input.GetKeyDown(KeyCode.E) && BeanGame == false)
+            {
+                    SceneManager.LoadScene("BeanGame", LoadSceneMode.Additive);
+                    LevelSwitch.SetActive(false);
+                
+            }
+        }
+
         if (collision.gameObject.tag == "Player" && speechCheck == 1)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -67,21 +83,21 @@ public class BeanGuyTrigger : MonoBehaviour
                 EButton.SetActive(false);
                 beanTexts[2].SetActive(false);
                 beanTexts[3].SetActive(true);
+                BeanGame = false;
                 
+
                 speechCheck = 5;
                 print("Speech2");
             }
         }
-        else if (collision.gameObject.tag == "Player" && speechCheck == 5 )
+        else if (collision.gameObject.tag == "Player" && speechCheck == 5 && BeanGame == true )
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 EButton.SetActive(false);
                 beanTexts[3].SetActive(false);
                 beanTexts[4].SetActive(true);
-                
-
-
+                DisplayBean();
                 speechCheck = 6;
                 print("Speech2");
             }
@@ -199,4 +215,8 @@ public class BeanGuyTrigger : MonoBehaviour
         ItemIcons[2].SetActive(true);
     }
 
+    public void RemoveText()
+    {
+        beanTexts[3].SetActive(false);
+    }
 }
