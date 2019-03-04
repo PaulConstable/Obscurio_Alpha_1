@@ -11,10 +11,15 @@ public class GameControl : MonoBehaviour {
     private GameObject winText;
 
     public static bool youWin;
+
+    BeanStalkTrigger myBeanStalkTrigger;
+
+
 	// Use this for initialization
 	void Start () {
         winText.SetActive(false);
         youWin = false;
+        myBeanStalkTrigger = FindObjectOfType<BeanStalkTrigger>();
 	}
 
 
@@ -40,6 +45,7 @@ public class GameControl : MonoBehaviour {
         {
             youWin = true;
             winText.SetActive(true);
+            myBeanStalkTrigger.SetBeanState3();
             SceneManager.UnloadSceneAsync("Puzzle-Game");
         } 
             
