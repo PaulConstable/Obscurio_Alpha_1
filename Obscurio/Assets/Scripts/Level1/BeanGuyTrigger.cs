@@ -7,10 +7,21 @@ public class BeanGuyTrigger : MonoBehaviour
 
     private int speechCheck = 1;
     public bool WellCheck = false;
+    public bool wellGameWon = false;
 
     [SerializeField] public GameObject[] beanTexts;
     [SerializeField] public GameObject[] SpeechImages;
+    [SerializeField] public GameObject[] ItemIcons;
     //public bool text;
+
+    WellWin myWellWin;
+
+
+    private void Start()
+    {
+        FindObjectOfType<WellWin>();
+
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -51,18 +62,19 @@ public class BeanGuyTrigger : MonoBehaviour
             {
                 beanTexts[2].SetActive(false);
                 beanTexts[3].SetActive(true);
+                WellCheck = true; // Makes WellGamePlayable
                 speechCheck = 5;
                 print("Speech2");
             }
         }
-        else if (collision.gameObject.tag == "Player" && speechCheck == 5)
+        else if (collision.gameObject.tag == "Player" && speechCheck == 5 && wellGameWon == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 beanTexts[3].SetActive(false);
                 beanTexts[4].SetActive(true);
-                WellCheck = true; // Makes WellGamePlayable
-                print(WellCheck);
+
+
                 speechCheck = 6;
                 print("Speech2");
             }
@@ -135,6 +147,17 @@ public class BeanGuyTrigger : MonoBehaviour
         SpeechImages[1].SetActive(false);
     }
 
+    public void returnState()
+    {
+        wellGameWon = true;
 
+
+        
+    }
+
+    public void DisplayCan()
+    {
+        ItemIcons[1].SetActive(true);
+    }
 
 }

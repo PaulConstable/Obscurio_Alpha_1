@@ -10,6 +10,7 @@ public class WellWin : MonoBehaviour
     BeanGuyTrigger myBeanGuyTrigger;
 
     public static bool youWin;
+    
 
     // Use this for initialization
     void Start()
@@ -27,10 +28,14 @@ public class WellWin : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-       
+        
+        
         youWin = true;
         winText.SetActive(true);
         myBeanGuyTrigger.CanSpeechBubbleRemoved();
+        myBeanGuyTrigger.DisplayCan();
+        myBeanGuyTrigger.returnState();
+
         SceneManager.UnloadSceneAsync("Well-Jump_Game");
         
  
