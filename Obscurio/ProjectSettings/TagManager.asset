@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Manager
+  - Black
+  - Red
+  - Gold
   layers:
   - Default
   - TransparentFX
