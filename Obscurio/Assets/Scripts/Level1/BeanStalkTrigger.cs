@@ -16,13 +16,13 @@ public class BeanStalkTrigger : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player" && beanState ==1)
+        if(collision.gameObject.tag == "Player" && beanState == 1)
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
                 stalks[0].SetActive(true);
                 myBeanGuyTrigger.BeanPlantedfunc();
-                myBeanGuyTrigger.RemoveBean();
+                
             }
         }
         if (collision.gameObject.tag == "Player" && beanState == 2)
@@ -31,6 +31,7 @@ public class BeanStalkTrigger : MonoBehaviour {
             {
                 stalks[1].SetActive(true);
                 stalks[0].SetActive(false);
+                myBeanGuyTrigger.RemoveCan();
             }
         }
         if (collision.gameObject.tag == "Player" && beanState == 3)
@@ -39,6 +40,7 @@ public class BeanStalkTrigger : MonoBehaviour {
             {
                 stalks[2].SetActive(true);
                 stalks[1].SetActive(false);
+                myBeanGuyTrigger.RemovePotion();
             }
         }
     }

@@ -9,6 +9,7 @@ public class WellWin : MonoBehaviour
 
     BeanGuyTrigger myBeanGuyTrigger;
     BeanStalkTrigger myBeanStalkTrigger;
+    WellGameTrigger myWellGameTrigger;
 
     public static bool youWin;
     
@@ -20,6 +21,7 @@ public class WellWin : MonoBehaviour
         youWin = false;
         myBeanGuyTrigger = FindObjectOfType<BeanGuyTrigger>();
         myBeanStalkTrigger = FindObjectOfType<BeanStalkTrigger>();
+        myWellGameTrigger = FindObjectOfType<WellGameTrigger>();
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class WellWin : MonoBehaviour
         myBeanGuyTrigger.DisplayCan();
         myBeanGuyTrigger.returnState();
         myBeanStalkTrigger.SetBeanState2();
+        myWellGameTrigger.RemoveButton();
 
         SceneManager.UnloadSceneAsync("Well-Jump_Game");
         

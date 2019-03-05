@@ -13,6 +13,7 @@ public class GameControl : MonoBehaviour {
     public static bool youWin;
 
     BeanStalkTrigger myBeanStalkTrigger;
+    BeanGuyTrigger myBeanGuyTrigger;
 
 
 	// Use this for initialization
@@ -20,6 +21,7 @@ public class GameControl : MonoBehaviour {
         winText.SetActive(false);
         youWin = false;
         myBeanStalkTrigger = FindObjectOfType<BeanStalkTrigger>();
+        myBeanGuyTrigger = FindObjectOfType<BeanGuyTrigger>();
 	}
 
 
@@ -46,6 +48,8 @@ public class GameControl : MonoBehaviour {
             youWin = true;
             winText.SetActive(true);
             myBeanStalkTrigger.SetBeanState3();
+           
+            myBeanGuyTrigger.Potions();
             SceneManager.UnloadSceneAsync("Puzzle-Game");
         } 
             
