@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class KeyPadClick : MonoBehaviour
 {
 
-    [SerializeField] public  string correctCode = "7845";
+    [SerializeField] public string correctCode = "7845";
+    [SerializeField] public GameObject[] buttons;
+  
     public static string playerCode = "";
 
     public static int buttonsPressed = 0;
+
+    [SerializeField] private Text KeypadCode;
     // Use this for initialization
     void Start()
     {
@@ -19,19 +23,23 @@ public class KeyPadClick : MonoBehaviour
     void Update()
     {
         Debug.Log(playerCode);
-
+        KeypadCode.text = "Code: " + playerCode;
         if (buttonsPressed == 4)
         {
             if (playerCode == correctCode)
             {
                 Debug.Log("Correct");
+          
             }
 
             else
             {
 
+                Debug.Log("Wrong");
                 buttonsPressed = 0;
                 playerCode = "";
+      
+
             }
         }
     }
@@ -49,5 +57,15 @@ public class KeyPadClick : MonoBehaviour
             playerCode = "";
             buttonsPressed = 0;
         }
+    }
+
+    private void OnMouseOver()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(0, 1, 0);
+    }
+
+    private void OnMouseExit()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
     }
 }
