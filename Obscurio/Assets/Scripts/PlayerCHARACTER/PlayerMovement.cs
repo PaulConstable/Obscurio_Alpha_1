@@ -25,10 +25,10 @@ public class PlayerMovement : MonoBehaviour {
         {
             horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
 
-            if (Input.GetButtonDown("Jump"))
+            /*if (Input.GetButtonDown("Jump"))
             {
                 jump = true;
-            }
+            }*/
         }
 
 

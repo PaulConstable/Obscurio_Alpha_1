@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LightGame : MonoBehaviour
 {
+
+    LoadingLightGame myLightGame;
 
     [SerializeField] public Button button1;
     [SerializeField] public Button button2;
@@ -24,6 +27,13 @@ public class LightGame : MonoBehaviour
     public bool check7 = false;
     public bool check8 = false;
     public bool check9 = false;
+
+
+    public void Start()
+    {
+        myLightGame = FindObjectOfType<LoadingLightGame>();
+    
+    }
 
     public void button1red()
     {
@@ -199,6 +209,8 @@ public class LightGame : MonoBehaviour
         button7.interactable = false;
         button8.interactable = false;
         button9.interactable = false;
+
+        myLightGame.CompleteGame();
     }
 
 
