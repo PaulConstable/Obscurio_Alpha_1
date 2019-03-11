@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BeanStalkTrigger : MonoBehaviour {
 
+    [SerializeField] public GameObject eButton;
     [SerializeField] public GameObject[] stalks;
     public int beanState = 0;
 
@@ -41,8 +43,20 @@ public class BeanStalkTrigger : MonoBehaviour {
                 stalks[2].SetActive(true);
                 stalks[1].SetActive(false);
                 myBeanGuyTrigger.RemovePotion();
+                beanState = 4;
+           
             }
         }
+        if(collision.gameObject.tag == "Player" && beanState == 4)
+        {
+            eButton.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                SceneManager.LoadScene("2.HAG");
+            }
+        }
+
+
     }
 
     public void SetBeanState1()
@@ -58,5 +72,12 @@ public class BeanStalkTrigger : MonoBehaviour {
         beanState = 3;
     }
 
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && beanState == 4)
+        {
+            eButton.SetActive(false);
+        }
+    }
 
 }
