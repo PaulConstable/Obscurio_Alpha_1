@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BeanGame.unity
     guid: 59ec9985520dedc4e8b9f1c313fc3274
+  - enabled: 1
+    path: Assets/Scenes/2.HAG.unity
+    guid: e2dc02b6b949447429a0801cc1116c26
+  - enabled: 1
+    path: Assets/Scenes/InsideHAG.unity
+    guid: ef98dfda97bef7d4d8b9b4c7a418eb8a
   m_configObjects: {}

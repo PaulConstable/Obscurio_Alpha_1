@@ -122,8 +122,9 @@ GameObject:
   m_Component:
   - component: {fileID: 174155260}
   - component: {fileID: 174155259}
+  - component: {fileID: 174155261}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LoadingInsideScript
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,7 +139,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -167,6 +168,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &174155261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 174155258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee59ae99bbe7274e80f52fa3b011d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &501760416 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1468278864931470, guid: c73f06f0486059841948834a64512241,
@@ -360,6 +372,10 @@ Prefab:
     - target: {fileID: 4570074449578720, guid: c73f06f0486059841948834a64512241, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468278864931470, guid: c73f06f0486059841948834a64512241, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c73f06f0486059841948834a64512241, type: 2}
