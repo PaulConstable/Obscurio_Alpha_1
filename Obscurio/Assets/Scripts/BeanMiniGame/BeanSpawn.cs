@@ -29,7 +29,7 @@ public class BeanSpawn : MonoBehaviour
         myBeanGuyTrigger = FindObjectOfType<BeanGuyTrigger>();
 
         InvokeRepeating("BlackBeanInstance", spawnTimeBlackBean, spawnTimeBlackBean);
-
+  
         InvokeRepeating("RedBeanInstance", spawnTimeRedBean, spawnTimeRedBean);
 
         InvokeRepeating("GoldBeanInstance", spawnTimeGoldBean, spawnTimeGoldBean);
@@ -46,6 +46,7 @@ public class BeanSpawn : MonoBehaviour
             myBeanGuyTrigger.LevelSwitch.SetActive(true);
             myBeanGuyTrigger.beanTexts[3].SetActive(false);
             myBeanGuyTrigger.BeanGame = true;
+            myBeanGuyTrigger.beanIntro.SetActive(false);
             SceneManager.UnloadSceneAsync("BeanGame");
         }
     }

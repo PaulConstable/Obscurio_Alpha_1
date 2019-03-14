@@ -16,11 +16,13 @@ public class BeanGuyTrigger : MonoBehaviour
     public bool PotionGame = false;
     public bool PotionCheck = false;
     public bool PotionObtained = false;
+    public bool beanGameIntro = false;
 
     [SerializeField] public GameObject[] beanTexts;
     [SerializeField] public GameObject[] SpeechImages;
     [SerializeField] public GameObject[] ItemIcons;
     [SerializeField] public GameObject EButton;
+    [SerializeField] public GameObject beanIntro;
     //public bool text;
 
     WellWin myWellWin;
@@ -52,7 +54,7 @@ public class BeanGuyTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E) && BeanGame == false)
+            if (Input.GetMouseButtonDown(0) && BeanGame == false)
             {
                 SceneManager.LoadScene("BeanGame", LoadSceneMode.Additive);
                 LevelSwitch.SetActive(false);
@@ -107,11 +109,14 @@ public class BeanGuyTrigger : MonoBehaviour
                     beanTexts[2].SetActive(false);
                     beanTexts[3].SetActive(true);
                     BeanGame = false;
-                    
+                    beanIntro.SetActive(true);
+                    beanGameIntro = true;
                     
                     speechCheck = 5;
                     print("Speech2");
                 }
+
+               
             }
             else if (collision.gameObject.tag == "Player" && speechCheck == 5 && BeanGame == true)
             {

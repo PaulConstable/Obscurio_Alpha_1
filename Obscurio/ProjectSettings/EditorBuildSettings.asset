@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Size-Game.unity
     guid: 03bce17bd116b544891df9f5a7a3aa8c
   - enabled: 1
+    path: Assets/Scenes/KeypadGame.unity
+    guid: 4ae9647aff12781499d1f9bb57744c8e
+  - enabled: 1
     path: Assets/Scenes/Well-Jump_Game.unity
     guid: 31b977cc2985a934ab7982d1a6e86da1
   - enabled: 1

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class KeyPadClick : MonoBehaviour
 {
 
@@ -22,6 +23,8 @@ public class KeyPadClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         Debug.Log(playerCode);
         KeypadCode.text = "Code: " + playerCode;
         if (buttonsPressed == 4)
@@ -29,6 +32,7 @@ public class KeyPadClick : MonoBehaviour
             if (playerCode == correctCode)
             {
                 Debug.Log("Correct");
+                SceneManager.LoadScene("InsideHAG");
           
             }
 
@@ -57,6 +61,10 @@ public class KeyPadClick : MonoBehaviour
             playerCode = "";
             buttonsPressed = 0;
         }
+        if(gameObject.name == "Leave")
+        {
+            SceneManager.UnloadSceneAsync("KeypadGame");
+        }
     }
 
     private void OnMouseOver()
@@ -68,4 +76,6 @@ public class KeyPadClick : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
     }
+
+   
 }
