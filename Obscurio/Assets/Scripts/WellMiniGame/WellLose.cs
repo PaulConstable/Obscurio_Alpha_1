@@ -7,6 +7,8 @@ public class WellLose : MonoBehaviour {
 
     [SerializeField]
     private GameObject loseText;
+    [SerializeField] private GameObject OutroScene;
+    public bool wellFailed;
 
     public static bool youLose;
 
@@ -27,12 +29,20 @@ public class WellLose : MonoBehaviour {
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Time.timeScale = 0;
-        youLose = true;
-        loseText.SetActive(true);
-        SceneManager.UnloadSceneAsync("Well-Jump_Game");
+        if (collision.gameObject.tag == "Player")
+        {
+            Time.timeScale = 0;
+            youLose = true;
+            loseText.SetActive(true);
+            OutroScene.SetActive(true);
+            wellFailed = true;
+        }
+        
         
     }
+    
+
+    
 }

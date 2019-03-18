@@ -17,12 +17,16 @@ public class BeanGuyTrigger : MonoBehaviour
     public bool PotionCheck = false;
     public bool PotionObtained = false;
     public bool beanGameIntro = false;
+    
+    
 
     [SerializeField] public GameObject[] beanTexts;
     [SerializeField] public GameObject[] SpeechImages;
     [SerializeField] public GameObject[] ItemIcons;
     [SerializeField] public GameObject EButton;
     [SerializeField] public GameObject beanIntro;
+    [SerializeField] public GameObject beanOutro;
+    
     //public bool text;
 
     WellWin myWellWin;
@@ -65,6 +69,7 @@ public class BeanGuyTrigger : MonoBehaviour
                 beanTexts[7].SetActive(false);
                 SceneManager.LoadScene("Puzzle-Game", LoadSceneMode.Additive);
             }
+           
             
 
             if (collision.gameObject.tag == "Player" && speechCheck == 1)
@@ -281,5 +286,6 @@ public class BeanGuyTrigger : MonoBehaviour
         ItemIcons[2].SetActive(true);
         PotionCheck = true;
     }
+
     
 }

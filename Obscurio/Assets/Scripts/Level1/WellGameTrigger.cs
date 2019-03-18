@@ -7,8 +7,10 @@ public class WellGameTrigger : MonoBehaviour
 {
     public static bool isLoaded = false;
     BeanGuyTrigger myBeanGuyTrigger;
+    public bool wellIntro;
 
     [SerializeField] public GameObject EBUtton;
+    [SerializeField] public GameObject wellGameIntro;
 
     // Use this for initialization
     void Start()
@@ -37,8 +39,16 @@ public class WellGameTrigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 isLoaded = true;
-                SceneManager.LoadScene("Well-Jump_Game", LoadSceneMode.Additive);
+                wellGameIntro.SetActive(true);
+                wellIntro = true;
+                
             }
+        }
+        if(wellIntro == true && Input.GetMouseButtonDown(0))
+        {
+            wellIntro = false;
+            wellGameIntro.SetActive(false);
+            SceneManager.LoadScene("Well-Jump_Game", LoadSceneMode.Additive);
         }
     }
 

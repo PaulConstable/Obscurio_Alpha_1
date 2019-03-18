@@ -12,11 +12,13 @@ public class BeanSpawn : MonoBehaviour
     public float spawnTimeRedBean;
     public GameObject GoldBean;
     public float spawnTimeGoldBean;
+    public GameObject[] medals;
+    public GameObject outro;
 
 
     // text
     public Text beanPlayerScore;
-
+    float timeLeft = 30f;
     private float playerBeanScore = 0;
 
     BeanStalkTrigger myBeanStalkTrigger;
@@ -38,17 +40,73 @@ public class BeanSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        beanPlayerScore.text = playerBeanScore + " / 50";
+        timeLeft -= Time.deltaTime;
 
-        if (playerBeanScore >= 20)
+        beanPlayerScore.text = playerBeanScore + " ";
+
+        //if (playerBeanScore >= 50)
+        if(timeLeft <= 0)
         {
-            myBeanStalkTrigger.SetBeanState1();
-            myBeanGuyTrigger.LevelSwitch.SetActive(true);
-            myBeanGuyTrigger.beanTexts[3].SetActive(false);
-            myBeanGuyTrigger.BeanGame = true;
-            myBeanGuyTrigger.beanIntro.SetActive(false);
-            SceneManager.UnloadSceneAsync("BeanGame");
+            if(playerBeanScore <=19)
+            {
+                outro.SetActive(true);
+                medals[3].SetActive(true);
+                if (Input.GetMouseButtonDown(0))
+                {
+                    SceneManager.UnloadSceneAsync("BeanGame");
+                    SceneManager.LoadScene("BeanGame", LoadSceneMode.Additive);
+                    outro.SetActive(false);
+                    medals[3].SetActive(false);
+                }
+            }
+            
+            if(playerBeanScore >= 20 && playerBeanScore <= 39)
+            {
+                
+                medals[0].SetActive(true);
+                CompleteLevel();
+                if(Input.GetMouseButtonDown(0))
+                {
+                    SceneManager.UnloadSceneAsync("BeanGame");
+                }
+            }
+            else if (playerBeanScore >=40 && playerBeanScore <= 59)
+            {
+                
+                medals[1].SetActive(true);
+                CompleteLevel();
+                if(Input.GetMouseButtonDown(0))
+                {
+                    SceneManager.UnloadSceneAsync("BeanGame");
+                }
+                
+            }
+            else if(playerBeanScore >=60)
+            {
+                
+                medals[2].SetActive(true);
+                CompleteLevel();
+                if(Input.GetMouseButtonDown(0))
+                {
+                    SceneManager.UnloadSceneAsync("BeanGame");
+                }
+                
+            }
+
+            
         }
+    }
+
+    void CompleteLevel()
+    {
+        myBeanStalkTrigger.SetBeanState1();
+        myBeanGuyTrigger.LevelSwitch.SetActive(true);
+        myBeanGuyTrigger.beanTexts[3].SetActive(false);
+        myBeanGuyTrigger.BeanGame = true;
+        myBeanGuyTrigger.beanIntro.SetActive(false);
+        outro.SetActive(true);
+        
+
     }
     void BlackBeanInstance()
     {
@@ -76,21 +134,21 @@ public class BeanSpawn : MonoBehaviour
       if (bean.gameObject.tag == "Black")
         {
             Destroy(bean.gameObject);
-            playerBeanScore = playerBeanScore + 2;
+            playerBeanScore = playerBeanScore -1;
             print(playerBeanScore);
         }
       
       else if (bean.gameObject.tag == "Red")
         {
             Destroy(bean.gameObject);
-            playerBeanScore = playerBeanScore + 5;
+            playerBeanScore = playerBeanScore + 3;
             print(playerBeanScore);
         }
 
       else if (bean.gameObject.tag == "Gold")
         {
             Destroy(bean.gameObject);
-            playerBeanScore = playerBeanScore + 10;
+            playerBeanScore = playerBeanScore + 5;
             print(playerBeanScore);
         }
     }
