@@ -45,11 +45,14 @@ public class BeanGuyTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && BeanObtained == false && PotionObtained == false && WellCheck == false && WaterUsed == false)
+        if (collision.gameObject.tag == "Player" && BeanObtained == false && PotionObtained == false && WellCheck == false && WaterUsed == false )
         {
             EButton.SetActive(true);
         }
-
+        if(WaterUsed == true)
+        {
+            EButton.SetActive(true);
+        }
     }
 
 
