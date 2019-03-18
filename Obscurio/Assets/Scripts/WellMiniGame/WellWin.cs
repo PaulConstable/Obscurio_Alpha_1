@@ -11,8 +11,13 @@ public class WellWin : MonoBehaviour
     BeanStalkTrigger myBeanStalkTrigger;
     WellGameTrigger myWellGameTrigger;
 
+
+    [SerializeField] public GameObject outro;
+    [SerializeField] public GameObject[] medals;
+    public bool introActive;
+
     public static bool youWin;
-    
+    public float time = 0f;
 
     // Use this for initialization
     void Start()
@@ -27,7 +32,12 @@ public class WellWin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
 
+        if(introActive == true && Input.GetMouseButtonDown(0))
+        {
+            SceneManager.UnloadSceneAsync("Well-Jump_Game");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -41,8 +51,23 @@ public class WellWin : MonoBehaviour
         myBeanGuyTrigger.returnState();
         myBeanStalkTrigger.SetBeanState2();
         myWellGameTrigger.RemoveButton();
+        introActive = true;
 
-        SceneManager.UnloadSceneAsync("Well-Jump_Game");
+        outro.SetActive(true);
+        if(time <= 15)
+        {
+            medals[2].SetActive(true);
+        }
+        if(time <=30)
+        {
+            medals[1].SetActive(true);
+        }
+        if(time > 30)
+        {
+            medals[0].SetActive(true);
+        }
+
+        
         
  
 

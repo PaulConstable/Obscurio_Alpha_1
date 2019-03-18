@@ -32,7 +32,7 @@ public class WellLose : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
-        {
+        { 
             Time.timeScale = 0;
             youLose = true;
             loseText.SetActive(true);
