@@ -34,7 +34,7 @@ public class WellWin : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        if(introActive == true && Input.GetMouseButtonDown(0))
+        if(introActive == true && Input.GetKeyDown(KeyCode.E))
         {
             SceneManager.UnloadSceneAsync("Well-Jump_Game");
         }

@@ -26,13 +26,18 @@ public class WellLose : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if(wellFailed == true && Input.GetKeyDown(KeyCode.E))
+        {
+            //Logic for reseting the level
+        }
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
-        { 
+        {
+            print("Hit Collider");
             Time.timeScale = 0;
             youLose = true;
             loseText.SetActive(true);
@@ -42,6 +47,8 @@ public class WellLose : MonoBehaviour {
         
         
     }
+
+    
     
 
     

@@ -44,7 +44,7 @@ public class WellGameTrigger : MonoBehaviour
                 
             }
         }
-        if(wellIntro == true && Input.GetMouseButtonDown(0))
+        if(wellIntro == true && Input.GetKeyDown(KeyCode.E))
         {
             wellIntro = false;
             wellGameIntro.SetActive(false);

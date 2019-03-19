@@ -61,7 +61,7 @@ public class BeanGuyTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (Input.GetMouseButtonDown(0) && BeanGame == false)
+            if (Input.GetKeyDown(KeyCode.E) && BeanGame == false)
             {
                 SceneManager.LoadScene("BeanGame", LoadSceneMode.Additive);
                 LevelSwitch.SetActive(false);

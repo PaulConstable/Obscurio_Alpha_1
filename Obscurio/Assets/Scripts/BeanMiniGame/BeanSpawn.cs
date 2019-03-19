@@ -51,7 +51,7 @@ public class BeanSpawn : MonoBehaviour
             {
                 outro.SetActive(true);
                 medals[3].SetActive(true);
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.UnloadSceneAsync("BeanGame");
                     SceneManager.LoadScene("BeanGame", LoadSceneMode.Additive);
@@ -65,28 +65,28 @@ public class BeanSpawn : MonoBehaviour
                 
                 medals[0].SetActive(true);
                 CompleteLevel();
-                if(Input.GetMouseButtonDown(0))
+                if(Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.UnloadSceneAsync("BeanGame");
                 }
             }
-            else if (playerBeanScore >=40 && playerBeanScore <= 59)
+            else if (playerBeanScore >=30 && playerBeanScore <= 59)
             {
                 
                 medals[1].SetActive(true);
                 CompleteLevel();
-                if(Input.GetMouseButtonDown(0))
+                if(Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.UnloadSceneAsync("BeanGame");
                 }
                 
             }
-            else if(playerBeanScore >=60)
+            else if(playerBeanScore >=40)
             {
                 
                 medals[2].SetActive(true);
                 CompleteLevel();
-                if(Input.GetMouseButtonDown(0))
+                if(Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.UnloadSceneAsync("BeanGame");
                 }
