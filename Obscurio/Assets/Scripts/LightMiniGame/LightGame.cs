@@ -9,6 +9,10 @@ public class LightGame : MonoBehaviour
 
     LoadingLightGame myLightGame;
 
+    
+
+  
+
     [SerializeField] public Button button1;
     [SerializeField] public Button button2;
     [SerializeField] public Button button3;
@@ -32,6 +36,7 @@ public class LightGame : MonoBehaviour
     public void Start()
     {
         myLightGame = FindObjectOfType<LoadingLightGame>();
+        
     
     }
 
@@ -561,6 +566,7 @@ public class LightGame : MonoBehaviour
         if (check1 == true && check2 == true && check3 == true && check4 == true && check5 == true && check6 == true && check7 == true && check8 == true && check9 == true)
         {
             Complete();
+            
         }
     }
 

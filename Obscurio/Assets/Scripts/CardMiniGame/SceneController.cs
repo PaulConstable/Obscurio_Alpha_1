@@ -1,22 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour {
 
-    public const int gridRows = 2;
+    public const int gridRows = 3;
     public const int gridCols = 4;
     public const float offsetX = 4f;
-    public const float offsetY = 5f;
+    public const float offsetY = 3f;
 
     [SerializeField] private MainCard originalCard;
     [SerializeField] private Sprite[] images;
+    WitchTrigger mywitchTrigger;
 
     private void Start()
     {
+        mywitchTrigger = FindObjectOfType<WitchTrigger>();
+
         Vector3 startPos = originalCard.transform.position;
 
-        int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3 };
+        int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5 };
         numbers = ShuffleArray(numbers);
 
         for (int i =0; i < gridCols; i++)
@@ -91,7 +95,11 @@ public class SceneController : MonoBehaviour {
         {
             _score++;
             scoreLabel.text = "Score: " + _score;
-
+            if(_score == 6)
+            {
+                mywitchTrigger.CompleteCardGame();
+                SceneManager.UnloadSceneAsync("CardGame2");
+            }
         }
         else
         {
@@ -106,6 +114,6 @@ public class SceneController : MonoBehaviour {
 
     }
 
-
+    
 
 }
