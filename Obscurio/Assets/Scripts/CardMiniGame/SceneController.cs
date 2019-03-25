@@ -7,12 +7,13 @@ public class SceneController : MonoBehaviour {
 
     public const int gridRows = 3;
     public const int gridCols = 4;
-    public const float offsetX = 4f;
+    public const float offsetX = 2f;
     public const float offsetY = 3f;
 
     [SerializeField] private MainCard originalCard;
     [SerializeField] private Sprite[] images;
     WitchTrigger mywitchTrigger;
+    public int noOfClicks;
 
     private void Start()
     {
@@ -69,7 +70,7 @@ public class SceneController : MonoBehaviour {
     private MainCard _secondRevealed;
 
     private int _score = 0;
-    [SerializeField] private TextMesh scoreLabel;
+    //[SerializeField] private TextMesh scoreLabel;
 
     public bool canReveal
     {
@@ -86,6 +87,8 @@ public class SceneController : MonoBehaviour {
         {
             _secondRevealed = card;
             StartCoroutine(CheckMatch());
+            noOfClicks++;
+            Debug.Log(noOfClicks);
         }
     }
 
@@ -94,7 +97,7 @@ public class SceneController : MonoBehaviour {
         if (_firstRevealed.id == _secondRevealed.id)
         {
             _score++;
-            scoreLabel.text = "Score: " + _score;
+            //scoreLabel.text = "Score: " + _score;
             if(_score == 6)
             {
                 mywitchTrigger.CompleteCardGame();

@@ -9,6 +9,7 @@ public class WitchTrigger : MonoBehaviour {
     [SerializeField] public GameObject[] witchTexts;
     public int witchText = 10;
     public bool cardGameLoaded;
+    public bool dragGameLoaded;
     
     
 
@@ -49,7 +50,15 @@ public class WitchTrigger : MonoBehaviour {
             eButton.SetActive(false);
             witchTexts[2].SetActive(false);
             witchTexts[3].SetActive(true);
-           
+            witchText = 4;
+        }
+        else if(Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 4 && cardGameLoaded == true && dragGameLoaded == false)
+        {
+            witchTexts[3].SetActive(false);
+            eButton.SetActive(false);
+            SceneManager.LoadScene("RecipeGame", LoadSceneMode.Additive);
+            dragGameLoaded = true;
+            
         }
     }
 
@@ -70,6 +79,10 @@ public class WitchTrigger : MonoBehaviour {
         if (collision.gameObject.tag == "Player" && witchText == 3)
         {
             witchTexts[2].SetActive(false);
+        }
+        if(collision.gameObject.tag == "Player" && witchText == 4)
+        {
+            witchTexts[3].SetActive(false);
         }
     }
 

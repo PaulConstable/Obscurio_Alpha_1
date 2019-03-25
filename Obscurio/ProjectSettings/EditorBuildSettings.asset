@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Well-Jump_Game.unity
     guid: 31b977cc2985a934ab7982d1a6e86da1
   - enabled: 1
+    path: Assets/Scenes/RecipeGame.unity
+    guid: 40a3657a30f0f7c44a2f7dcd09341023
+  - enabled: 1
     path: Assets/Scenes/BeanGame.unity
     guid: 59ec9985520dedc4e8b9f1c313fc3274
   - enabled: 1
