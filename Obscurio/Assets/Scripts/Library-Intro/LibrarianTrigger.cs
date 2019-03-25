@@ -27,6 +27,13 @@ public class LibrarianTrigger : MonoBehaviour {
             eButton.SetActive(false);
             librarianText = 1;
         }
+        else if(Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && librarianText == 1)
+        {
+            librarianTexts[0].SetActive(false);
+            librarianTexts[1].SetActive(true);
+            eButton.SetActive(false);
+            librarianText = 2;
+        }
     }
 
     public void OnTriggerExit2D(Collider2D collision)

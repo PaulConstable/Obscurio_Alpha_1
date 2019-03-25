@@ -17,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzle-Game.unity
     guid: c3f7cf50a58c00848bed4f90a5bdf9a1
-  - enabled: 0
-    path: Assets/Scenes/Size-Game.unity
-    guid: 03bce17bd116b544891df9f5a7a3aa8c
   - enabled: 1
     path: Assets/Scenes/KeypadGame.unity
     guid: 4ae9647aff12781499d1f9bb57744c8e
@@ -32,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2.HAG.unity
     guid: e2dc02b6b949447429a0801cc1116c26
+  - enabled: 1
+    path: Assets/Scenes/CardGame2.unity
+    guid: c0c7e81010dac294189b17af217d1dc0
   - enabled: 1
     path: Assets/Scenes/InsideHAG.unity
     guid: ef98dfda97bef7d4d8b9b4c7a418eb8a

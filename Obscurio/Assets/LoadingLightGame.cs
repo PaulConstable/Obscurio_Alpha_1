@@ -7,6 +7,7 @@ public class LoadingLightGame : MonoBehaviour
     public bool lightgameCompleted;
     [SerializeField] public GameObject EButton;
     [SerializeField] public GameObject overlay;
+    [SerializeField] public GameObject blocker;
 
     public void OnTriggerStay2D(Collider2D collision)
     {
@@ -37,7 +38,7 @@ public class LoadingLightGame : MonoBehaviour
         overlay.SetActive(false);
         EButton.SetActive(false);
         lightgameCompleted = true;
-
+        blocker.SetActive(false);
     }
 
 
