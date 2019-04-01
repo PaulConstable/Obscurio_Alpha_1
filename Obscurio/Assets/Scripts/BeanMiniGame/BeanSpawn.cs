@@ -15,6 +15,8 @@ public class BeanSpawn : MonoBehaviour
     public GameObject[] medals;
     public GameObject outro;
 
+    public bool GameOver;
+
 
     // text
     public Text beanPlayerScore;
@@ -30,11 +32,13 @@ public class BeanSpawn : MonoBehaviour
         myBeanStalkTrigger = FindObjectOfType<BeanStalkTrigger>();
         myBeanGuyTrigger = FindObjectOfType<BeanGuyTrigger>();
 
-        InvokeRepeating("BlackBeanInstance", spawnTimeBlackBean, spawnTimeBlackBean);
-  
-        InvokeRepeating("RedBeanInstance", spawnTimeRedBean, spawnTimeRedBean);
+        
+            InvokeRepeating("BlackBeanInstance", spawnTimeBlackBean, spawnTimeBlackBean);
 
-        InvokeRepeating("GoldBeanInstance", spawnTimeGoldBean, spawnTimeGoldBean);
+            InvokeRepeating("RedBeanInstance", spawnTimeRedBean, spawnTimeRedBean);
+
+            InvokeRepeating("GoldBeanInstance", spawnTimeGoldBean, spawnTimeGoldBean);
+        
     }
 
     // Update is called once per frame
@@ -47,6 +51,7 @@ public class BeanSpawn : MonoBehaviour
         //if (playerBeanScore >= 50)
         if(timeLeft <= 0)
         {
+            GameOver = true;
             if(playerBeanScore <=19)
             {
                 outro.SetActive(true);
@@ -110,23 +115,32 @@ public class BeanSpawn : MonoBehaviour
     }
     void BlackBeanInstance()
     {
-        //var newBlackBean = GameObject.Instantiate(BlackBean);
-        Vector3 position1 = new Vector3(Random.Range(-74.0f, -62.0f), Random.Range(7.0f, 9.0f), 13);
-        Instantiate(BlackBean, position1, Quaternion.identity);
+        if (GameOver == false)
+        {
+            //var newBlackBean = GameObject.Instantiate(BlackBean);
+            Vector3 position1 = new Vector3(Random.Range(-74.0f, -62.0f), Random.Range(7.0f, 9.0f), 13);
+            Instantiate(BlackBean, position1, Quaternion.identity);
+        }
     }
 
     void RedBeanInstance()
     {
-        //var newRedBean = GameObject.Instantiate(RedBean);
-        Vector3 position2 = new Vector3(Random.Range(-74.0f, -62.0f), Random.Range(9.0f, 12.0f), 13);
-        Instantiate(RedBean, position2, Quaternion.identity);
+        if (GameOver == false)
+        {
+            //var newRedBean = GameObject.Instantiate(RedBean);
+            Vector3 position2 = new Vector3(Random.Range(-74.0f, -62.0f), Random.Range(9.0f, 12.0f), 13);
+            Instantiate(RedBean, position2, Quaternion.identity);
+        }
     }
 
     void GoldBeanInstance()
     {
-        //var newGoldBean = GameObject.Instantiate(GoldBean);
-        Vector3 position3 = new Vector3(Random.Range(-74.0f, -62.0f), Random.Range(7.0f, 14.0f), 13);
-        Instantiate(GoldBean, position3, Quaternion.identity);
+        if (GameOver == false)
+        {
+            //var newGoldBean = GameObject.Instantiate(GoldBean);
+            Vector3 position3 = new Vector3(Random.Range(-74.0f, -62.0f), Random.Range(7.0f, 14.0f), 13);
+            Instantiate(GoldBean, position3, Quaternion.identity);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D bean)
