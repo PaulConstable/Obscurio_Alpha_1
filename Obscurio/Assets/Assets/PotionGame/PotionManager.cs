@@ -1,21 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PotionManager : MonoBehaviour
 {
 
-    public GameObject EyeBall, Frog, DeadFlower, Couldron;
+    [SerializeField]  private GameObject EyeBall, Frog, DeadFlower, ToadStool, Feather;
+    //[SerializeField]  private GameObject EyeBallOutline, FrogOutline, DeadFlowerOutline, ToadStoolOutline, FeatherOutline;
 
-    Vector2 EyeBallIntPos, FrogIntPos, DeadFlowerIntPos;
+  
+    public int stage1Total, stage2Total, stage3Total;
+    public int stage1Score, stage2Score, stage3Score;
+    public int stage1Clicks, stage2Clicks, stage3Clicks;
+
+    public int playerStage;
+    [SerializeField] private Text playerStageText;
 
     // Use this for initialization
     void Start()
     {
-        
-        EyeBallIntPos = EyeBall.transform.position;
-        FrogIntPos = Frog.transform.position;
-        DeadFlowerIntPos = DeadFlower.transform.position; 
+       // EyeBallOutline.SetActive(false);
+       // FrogOutline.SetActive(false);
+       // DeadFlowerOutline.SetActive(false);
+       // ToadStoolOutline.SetActive(false);
+       // FeatherOutline.SetActive(false);
+
+
+        playerStage = 1;
+        Debug.Log(stage1Score);
     }
 
     // Update is called once per frame
@@ -23,63 +35,12 @@ public class PotionManager : MonoBehaviour
     {
     }
 
-    public void DragEyeBall()
+    public void eyeBallLevel1()
     {
-        Debug.Log("dragE");
-        EyeBall.transform.position = Input.mousePosition;
-     
+        stage1Score = stage1Score + 1;
+        Debug.Log(stage1Score);
     }
+  
 
-    public void DragFrog()
-    {
-        Frog.transform.position = Input.mousePosition;
-    }
 
-    public void DragDeadFlower()
-    {
-        DeadFlower.transform.position = Input.mousePosition;
-    }
-
-    public void DropEyeBall()
-    {
-        float Distance = Vector3.Distance(EyeBall.transform.position, Couldron.transform.position);
-        if (Distance < 50)
-        {
-            EyeBall.transform.position = Couldron.transform.position;
-        }
-
-        else
-        {
-            EyeBall.transform.position = EyeBallIntPos;
-        }
-    }
-
-    public void DropFrog()
-    {
-        float Distance = Vector3.Distance(Frog.transform.position, Couldron.transform.position);
-        if (Distance < 50)
-        {
-            Frog.transform.position = Couldron.transform.position;
-        }
-
-        else
-        {
-            Frog.transform.position = FrogIntPos;
-        }
-    }
-
-    public void DropDeadFlower()
-    {
-        float Distance = Vector3.Distance(DeadFlower.transform.position, Couldron.transform.position);
-        if (Distance < 50)
-        {
-            DeadFlower.transform.position = Couldron.transform.position;
-        }
-
-        else
-        {
-            DeadFlower.transform.position = DeadFlowerIntPos;
-        }
-    }
-    
 }

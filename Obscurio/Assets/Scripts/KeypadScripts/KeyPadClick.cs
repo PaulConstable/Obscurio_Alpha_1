@@ -13,6 +13,8 @@ public class KeyPadClick : MonoBehaviour
 
     public static int buttonsPressed = 0;
 
+
+
     [SerializeField] private Text KeypadCode;
     // Use this for initialization
     void Start()
@@ -48,6 +50,7 @@ public class KeyPadClick : MonoBehaviour
         }
     }
 
+    
 
     void OnMouseUp()
     {
