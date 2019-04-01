@@ -5,19 +5,23 @@ using UnityEngine;
 public class PuzzleGame : MonoBehaviour
 {
 
+    GameControl MygameControl;
     
     public float timeTaken = 0;
 
     public void Start()
     {
-
+        MygameControl = FindObjectOfType<GameControl>();
 
 
     }
 
     private void Update()
     {
-        timeTaken += Time.deltaTime;
+        if (MygameControl.isOutroScene == false)
+        {
+            timeTaken += Time.deltaTime;
+        }
     }
 
     private void OnMouseDown()

@@ -12,6 +12,10 @@ public class SceneController : MonoBehaviour {
 
     [SerializeField] private MainCard originalCard;
     [SerializeField] private Sprite[] images;
+    [SerializeField] public GameObject IntroText;
+    [SerializeField] public GameObject IntroMedals;
+    [SerializeField] public GameObject[] medals;
+
     WitchTrigger mywitchTrigger;
     public int noOfClicks;
 
@@ -100,8 +104,23 @@ public class SceneController : MonoBehaviour {
             //scoreLabel.text = "Score: " + _score;
             if(_score == 6)
             {
-                mywitchTrigger.CompleteCardGame();
-                SceneManager.UnloadSceneAsync("CardGame2");
+                
+                
+                IntroText.SetActive(false);
+                IntroMedals.SetActive(false);
+                if(noOfClicks <=10)
+                {
+                    medals[0].SetActive(true);
+                }
+                if(noOfClicks <=15 && noOfClicks > 10)
+                {
+                    medals[1].SetActive(true);
+                }
+                if(noOfClicks > 15)
+                {
+                    medals[2].SetActive(true);
+                }
+                
             }
         }
         else
@@ -117,6 +136,14 @@ public class SceneController : MonoBehaviour {
 
     }
 
-    
+    public void Update()
+    {
+        if(_score == 6 && Input.GetKeyDown(KeyCode.E))
+        {
+            mywitchTrigger.CompleteCardGame();
+            SceneManager.UnloadSceneAsync("CardGame2");
+        }
+    }
+
 
 }

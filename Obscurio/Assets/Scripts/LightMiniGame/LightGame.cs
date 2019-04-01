@@ -9,7 +9,8 @@ public class LightGame : MonoBehaviour
 
     LoadingLightGame myLightGame;
 
-    
+    public int clicks;
+    [SerializeField] public GameObject[] Medals;
 
   
 
@@ -40,6 +41,11 @@ public class LightGame : MonoBehaviour
     
     }
 
+    public void Update()
+    {
+        
+    }
+
     public void button1red()
     {
         check1 = true;
@@ -48,6 +54,7 @@ public class LightGame : MonoBehaviour
         color1.highlightedColor = Color.red;
         color1.pressedColor = Color.red;
         button1.colors = color1;
+        
     }
     public void button1white()
     {
@@ -57,6 +64,7 @@ public class LightGame : MonoBehaviour
         color1.highlightedColor = Color.white;
         color1.pressedColor = Color.white;
         button1.colors = color1;
+        
     }
     public void button2red()
     {
@@ -66,6 +74,7 @@ public class LightGame : MonoBehaviour
         color2.highlightedColor = Color.red;
         color2.pressedColor = Color.red;
         button2.colors = color2;
+        
     }
     public void button2white()
     {
@@ -75,6 +84,7 @@ public class LightGame : MonoBehaviour
         color2.highlightedColor = Color.white;
         color2.pressedColor = Color.white;
         button2.colors = color2;
+        
     }
     public void button3red()
     {
@@ -84,6 +94,7 @@ public class LightGame : MonoBehaviour
         color3.highlightedColor = Color.red;
         color3.pressedColor = Color.red;
         button3.colors = color3;
+        
     }
     public void button3white()
     {
@@ -93,6 +104,7 @@ public class LightGame : MonoBehaviour
         color3.highlightedColor = Color.white;
         color3.pressedColor = Color.white;
         button3.colors = color3;
+        
     }
     public void button4red()
     {
@@ -102,6 +114,7 @@ public class LightGame : MonoBehaviour
         color4.highlightedColor = Color.red;
         color4.pressedColor = Color.red;
         button4.colors = color4;
+        
     }
     public void button4white()
     {
@@ -111,6 +124,7 @@ public class LightGame : MonoBehaviour
         color4.highlightedColor = Color.white;
         color4.pressedColor = Color.white;
         button4.colors = color4;
+       
     }
     public void button5red()
     {
@@ -120,6 +134,7 @@ public class LightGame : MonoBehaviour
         color5.highlightedColor = Color.red;
         color5.pressedColor = Color.red;
         button5.colors = color5;
+        
     }
     public void button5white()
     {
@@ -129,6 +144,7 @@ public class LightGame : MonoBehaviour
         color5.highlightedColor = Color.white;
         color5.pressedColor = Color.white;
         button5.colors = color5;
+        
     }
     public void button6red()
     {
@@ -138,6 +154,7 @@ public class LightGame : MonoBehaviour
         color6.highlightedColor = Color.red;
         color6.pressedColor = Color.red;
         button6.colors = color6;
+        
     }
     public void button6white()
     {
@@ -147,6 +164,7 @@ public class LightGame : MonoBehaviour
         color6.highlightedColor = Color.white;
         color6.pressedColor = Color.white;
         button6.colors = color6;
+        
     }
     public void button7red()
     {
@@ -156,6 +174,7 @@ public class LightGame : MonoBehaviour
         color7.highlightedColor = Color.red;
         color7.pressedColor = Color.red;
         button7.colors = color7;
+        
     }
     public void button7white()
     {
@@ -165,6 +184,7 @@ public class LightGame : MonoBehaviour
         color7.highlightedColor = Color.white;
         color7.pressedColor = Color.white;
         button7.colors = color7;
+        
     }
     public void button8red()
     {
@@ -174,6 +194,7 @@ public class LightGame : MonoBehaviour
         color8.highlightedColor = Color.red;
         color8.pressedColor = Color.red;
         button8.colors = color8;
+       
     }
     public void button8white()
     {
@@ -183,6 +204,7 @@ public class LightGame : MonoBehaviour
         color8.highlightedColor = Color.white;
         color8.pressedColor = Color.white;
         button8.colors = color8;
+        
     }
     public void button9red()
     {
@@ -192,6 +214,7 @@ public class LightGame : MonoBehaviour
         color9.highlightedColor = Color.red;
         color9.pressedColor = Color.red;
         button9.colors = color9;
+       
     }
     public void button9white()
     {
@@ -201,6 +224,7 @@ public class LightGame : MonoBehaviour
         color9.highlightedColor = Color.white;
         color9.pressedColor = Color.white;
         button9.colors = color9;
+        
     }
 
     public void Complete()
@@ -215,7 +239,21 @@ public class LightGame : MonoBehaviour
         button8.interactable = false;
         button9.interactable = false;
 
-        myLightGame.CompleteGame();
+        //myLightGame.CompleteGame();
+        print(clicks);
+        if(clicks < 10)
+        {
+            Medals[0].SetActive(true);
+        }
+        if(clicks > 10 && clicks <=20)
+        {
+            Medals[1].SetActive(true);
+        }
+        if(clicks > 20)
+        {
+            Medals[2].SetActive(true);
+        }
+        
     }
 
 
@@ -226,6 +264,7 @@ public class LightGame : MonoBehaviour
 
     public void Button1()
     {
+        clicks++;
         if(check1== false)
         {
             button1red();
@@ -259,6 +298,7 @@ public class LightGame : MonoBehaviour
 
     public void Button2()
     {
+        clicks++;
         if (check2 == false)
         {
             button2red();
@@ -302,7 +342,8 @@ public class LightGame : MonoBehaviour
 
     public void Button3()
     {
-        if(check3 ==false)
+        clicks++;
+        if (check3 ==false)
         {
             button3red();
         }
@@ -335,7 +376,8 @@ public class LightGame : MonoBehaviour
 
     public void Button4()
     {
-        if(check4 ==false)
+        clicks++;
+        if (check4 ==false)
         {
             button4red();
         }
@@ -375,6 +417,7 @@ public class LightGame : MonoBehaviour
 
     public void Button5()
     {
+        clicks++;
         if (check5 == false)
         {
             button5red();
@@ -425,6 +468,7 @@ public class LightGame : MonoBehaviour
 
     public void Button6()
     {
+        clicks++;
         if (check6 == false)
         {
             button6red();
@@ -466,7 +510,8 @@ public class LightGame : MonoBehaviour
 
     public void Button7()
     {
-        if(check7 == false)
+        clicks++;
+        if (check7 == false)
         {
             button7red();
         }
@@ -498,7 +543,8 @@ public class LightGame : MonoBehaviour
 
     public void Button8()
     {
-        if(check8==false)
+        clicks++;
+        if (check8==false)
         {
             button8red();
         }
@@ -538,7 +584,8 @@ public class LightGame : MonoBehaviour
 
     public void Button9()
     {
-        if(check9 == false)
+        clicks++;
+        if (check9 == false)
         {
             button9red();
         }

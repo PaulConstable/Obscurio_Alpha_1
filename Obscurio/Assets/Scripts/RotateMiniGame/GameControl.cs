@@ -58,7 +58,7 @@ public class GameControl : MonoBehaviour {
             {
                 medals[2].SetActive(true);
             }
-            if(myPuzzleGame.timeTaken < 70)
+            if(myPuzzleGame.timeTaken > 40 && myPuzzleGame.timeTaken < 70)
             {
                 medals[1].SetActive(true);
             }
@@ -70,7 +70,7 @@ public class GameControl : MonoBehaviour {
         } 
 
             
-        if(isOutroScene == true && Input.GetMouseButtonDown(0))
+        if(isOutroScene == true && Input.GetKeyDown(KeyCode.E))
         {
             youWin = true;
             winText.SetActive(true);
