@@ -213,7 +213,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &21023660
 MonoBehaviour:
@@ -223,27 +223,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 21023656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f33f2babd4be64b409e3ff7c8928671c, type: 3}
+  m_Script: {fileID: 11500000, guid: d25bd5a060d37f045b3982b4692f236c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EyeBall: {fileID: 0}
-  Frog: {fileID: 0}
-  DeadFlower: {fileID: 0}
-  ToadStool: {fileID: 0}
-  Feather: {fileID: 0}
-  EyeBallOutline: {fileID: 0}
-  FrogOutline: {fileID: 0}
-  DeadFlowerOutline: {fileID: 0}
-  ToadStoolOutline: {fileID: 0}
-  FeatherOutline: {fileID: 0}
-  stage1Total: 0
-  stage2Total: 0
-  stage3Total: 0
-  stage1Score: 0
-  stage2Score: 0
-  stage3Score: 0
-  playerStage: 0
-  playerStageText: {fileID: 0}
 --- !u!1 &264159037
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,11 +322,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 264159037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 3, z: 1}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 8.5, y: 3, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &264159041
 MonoBehaviour:
@@ -354,27 +336,71 @@ MonoBehaviour:
   m_GameObject: {fileID: 264159037}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f33f2babd4be64b409e3ff7c8928671c, type: 3}
+  m_Script: {fileID: 11500000, guid: d25bd5a060d37f045b3982b4692f236c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EyeBall: {fileID: 0}
-  Frog: {fileID: 0}
-  DeadFlower: {fileID: 0}
-  ToadStool: {fileID: 0}
-  Feather: {fileID: 0}
-  EyeBallOutline: {fileID: 0}
-  FrogOutline: {fileID: 0}
-  DeadFlowerOutline: {fileID: 0}
-  ToadStoolOutline: {fileID: 0}
-  FeatherOutline: {fileID: 0}
-  stage1Total: 0
-  stage2Total: 0
-  stage3Total: 0
-  stage1Score: 0
-  stage2Score: 0
-  stage3Score: 0
-  playerStage: 0
-  playerStageText: {fileID: 0}
+--- !u!1 &293397037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 293397040}
+  - component: {fileID: 293397039}
+  - component: {fileID: 293397038}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &293397038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 293397037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &293397039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 293397037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &293397040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 293397037}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &554173227
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +490,7 @@ GameObject:
   - component: {fileID: 588854535}
   - component: {fileID: 588854538}
   m_Layer: 0
-  m_Name: Eyeball
+  m_Name: EyeBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -548,11 +574,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 588854534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.5, y: 3, z: 1}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 1.5, y: 3, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &588854538
 MonoBehaviour:
@@ -562,27 +588,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 588854534}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f33f2babd4be64b409e3ff7c8928671c, type: 3}
+  m_Script: {fileID: 11500000, guid: d25bd5a060d37f045b3982b4692f236c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EyeBall: {fileID: 0}
-  Frog: {fileID: 0}
-  DeadFlower: {fileID: 0}
-  ToadStool: {fileID: 0}
-  Feather: {fileID: 0}
-  EyeBallOutline: {fileID: 0}
-  FrogOutline: {fileID: 0}
-  DeadFlowerOutline: {fileID: 0}
-  ToadStoolOutline: {fileID: 0}
-  FeatherOutline: {fileID: 0}
-  stage1Total: 0
-  stage2Total: 0
-  stage3Total: 0
-  stage1Score: 0
-  stage2Score: 0
-  stage3Score: 0
-  playerStage: 0
-  playerStageText: {fileID: 0}
 --- !u!1 &668261754
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +716,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &716179598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 716179600}
+  - component: {fileID: 716179599}
+  m_Layer: 0
+  m_Name: BloodVialAsset 6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &716179599
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 716179598}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b5542e8cd1097e74a891adce8732f47a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.46, y: 10.6}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &716179600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 716179598}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.24, y: 3.03, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &743147946
 GameObject:
@@ -935,7 +1018,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &845267492
 MonoBehaviour:
@@ -945,27 +1028,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 845267488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f33f2babd4be64b409e3ff7c8928671c, type: 3}
+  m_Script: {fileID: 11500000, guid: d25bd5a060d37f045b3982b4692f236c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EyeBall: {fileID: 0}
-  Frog: {fileID: 0}
-  DeadFlower: {fileID: 0}
-  ToadStool: {fileID: 0}
-  Feather: {fileID: 0}
-  EyeBallOutline: {fileID: 0}
-  FrogOutline: {fileID: 0}
-  DeadFlowerOutline: {fileID: 0}
-  ToadStoolOutline: {fileID: 0}
-  FeatherOutline: {fileID: 0}
-  stage1Total: 0
-  stage2Total: 0
-  stage3Total: 0
-  stage1Score: 0
-  stage2Score: 0
-  stage3Score: 0
-  playerStage: 0
-  playerStageText: {fileID: 0}
 --- !u!1 &1175270582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,6 +1166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1193170218}
   - component: {fileID: 1193170217}
+  - component: {fileID: 1193170219}
   m_Layer: 0
   m_Name: CauldronAboveAsset 7
   m_TagString: Untagged
@@ -1165,8 +1231,35 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1193170219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193170216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f33f2babd4be64b409e3ff7c8928671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EyeBall: {fileID: 588854534}
+  Frog: {fileID: 845267488}
+  DeadFlower: {fileID: 264159037}
+  ToadStool: {fileID: 1723714429}
+  Feather: {fileID: 21023656}
+  stage1Total: 0
+  stage2Total: 0
+  stage3Total: 0
+  stage1Score: 0
+  stage2Score: 0
+  stage3Score: 0
+  stage1Clicks: 0
+  stage2Clicks: 0
+  stage3Clicks: 0
+  playerStage: 0
+  playerStageText: {fileID: 0}
 --- !u!1 &1723714429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,7 +1360,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1723714433
 MonoBehaviour:
@@ -1277,85 +1370,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1723714429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f33f2babd4be64b409e3ff7c8928671c, type: 3}
+  m_Script: {fileID: 11500000, guid: d25bd5a060d37f045b3982b4692f236c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EyeBall: {fileID: 0}
-  Frog: {fileID: 0}
-  DeadFlower: {fileID: 0}
-  ToadStool: {fileID: 0}
-  Feather: {fileID: 0}
-  EyeBallOutline: {fileID: 0}
-  FrogOutline: {fileID: 0}
-  DeadFlowerOutline: {fileID: 0}
-  ToadStoolOutline: {fileID: 0}
-  FeatherOutline: {fileID: 0}
-  stage1Total: 0
-  stage2Total: 0
-  stage3Total: 0
-  stage1Score: 0
-  stage2Score: 0
-  stage3Score: 0
-  playerStage: 0
-  playerStageText: {fileID: 0}
---- !u!1 &1815473803
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1815473805}
-  - component: {fileID: 1815473804}
-  m_Layer: 0
-  m_Name: PotionGameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1815473804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1815473803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f33f2babd4be64b409e3ff7c8928671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EyeBall: {fileID: 0}
-  Frog: {fileID: 0}
-  DeadFlower: {fileID: 0}
-  ToadStool: {fileID: 0}
-  Feather: {fileID: 0}
-  EyeBallOutline: {fileID: 0}
-  FrogOutline: {fileID: 0}
-  DeadFlowerOutline: {fileID: 0}
-  ToadStoolOutline: {fileID: 0}
-  FeatherOutline: {fileID: 0}
-  stage1Total: 0
-  stage2Total: 0
-  stage3Total: 0
-  stage1Score: 0
-  stage2Score: 0
-  stage3Score: 0
-  playerStage: 0
-  playerStageText: {fileID: 0}
---- !u!4 &1815473805
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1815473803}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 466.2382, y: 286.9053, z: 30.125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1864234198
 GameObject:
   m_ObjectHideFlags: 0
