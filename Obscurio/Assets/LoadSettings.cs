@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class LoadSettings : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+
+    [SerializeField] public GameObject SettingMenu;
+    [SerializeField] public GameObject eButton;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -17,9 +21,25 @@ public class LoadSettings : MonoBehaviour {
 
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-            SceneManager.LoadScene("SettingMenu", LoadSceneMode.Additive);
-        Time.timeScale = 0; 
+        eButton.SetActive(true);
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SettingMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
+    }
+
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        eButton.SetActive(false);
+    }
+
+    public void exitMenu()
+    {
+        SettingMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 }
