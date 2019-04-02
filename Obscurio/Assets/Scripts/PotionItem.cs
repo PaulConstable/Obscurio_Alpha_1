@@ -6,9 +6,25 @@ public class PotionItem : MonoBehaviour {
 
     PotionManager myPotionManager;
 
-    [SerializeField] public string correctPotionStage1 = "";
-    [SerializeField] public string correctPotionStage2 = "";
-    [SerializeField] public string correctPotionStage3 = "";
+    [SerializeField] public string correctItem1Stage1 = "";
+    [SerializeField] public string correctItem2Stage1 = "";
+
+    [SerializeField] public string correctItem1Stage2 = "";
+    [SerializeField] public string correctItem2Stage2 = "";
+    [SerializeField] public string correctItem3Stage2 = "";
+
+    [SerializeField] public string correctItem1Stage3 = "";
+    [SerializeField] public string correctItem2Stage3 = "";
+    [SerializeField] public string correctItem3Stage3 = "";
+    [SerializeField] public string correctItem4Stage3 = "";
+
+
+    [SerializeField] GameObject correctItem1, correctItem2, correctItem3, correctItem4;
+    [SerializeField] GameObject wrongItem1, wrongItem2, wrongItem3, wrongItem4;
+
+    private string correctPotionStage1 = "";
+    private string correctPotionStage2 = "";
+    private string correctPotionStage3 = "";
     public static string playerPotion = "";
     public static int buttonsPressed = 0;
 
@@ -18,7 +34,16 @@ public class PotionItem : MonoBehaviour {
     // Use this for initialization
     void Start() {
         myPotionManager = FindObjectOfType<PotionManager>();
-        
+
+        correctPotionStage1 = correctItem1Stage1 + correctItem2Stage1;
+        Debug.Log(correctPotionStage1);
+
+        correctPotionStage2 = correctItem1Stage2 + correctItem2Stage2 + correctItem3Stage2;
+        Debug.Log(correctPotionStage2);
+
+        correctPotionStage3 = correctItem1Stage3 + correctItem2Stage3 + correctItem3Stage3 + correctItem4Stage3;
+        Debug.Log(correctPotionStage3);
+
     }
 
     // Update is called once per frame
@@ -33,7 +58,9 @@ public class PotionItem : MonoBehaviour {
                 Debug.Log("Correct");
                 myPotionManager.turnOnUI1();
                 myPotionManager.playerStage = 2;
-                
+                resetHelp();
+
+
             }
             else
             {
@@ -42,7 +69,7 @@ public class PotionItem : MonoBehaviour {
                 playerPotion = "";
                 myPotionManager.turnOn();
                 TimesWrong++;
-                
+                resetHelp();
             }
         } else if (buttonsPressed == 3 && myPotionManager.playerStage == 2)
         {
@@ -51,7 +78,7 @@ public class PotionItem : MonoBehaviour {
                 Debug.Log("Correct");
                 myPotionManager.turnOnUI2();
                 myPotionManager.playerStage = 3;
-                
+                resetHelp();
             }
             else
             {
@@ -60,6 +87,7 @@ public class PotionItem : MonoBehaviour {
                 playerPotion = "";
                 myPotionManager.turnOn();
                 TimesWrong++;
+                resetHelp();
             }
         } else if (buttonsPressed == 4 && myPotionManager.playerStage == 3)
         {
@@ -68,7 +96,7 @@ public class PotionItem : MonoBehaviour {
                 myPotionManager.turnOnUI3();
                 Debug.Log("Correct");
                 myPotionManager.playerStage = 4;
-              
+                resetHelp();
             }
             else
             {
@@ -77,8 +105,11 @@ public class PotionItem : MonoBehaviour {
                 playerPotion = "";
                 myPotionManager.turnOn();
                 TimesWrong++;
+                resetHelp();
             }
         }
+
+       
     }
 
     void OnMouseUp()
@@ -88,10 +119,110 @@ public class PotionItem : MonoBehaviour {
             playerPotion += gameObject.name;
             gameObject.SetActive(false);
             buttonsPressed += 1;
+            checkHelp();
         }
     }
 
+    public void resetHelp()
+    {
+        correctItem1.SetActive(false);
+        correctItem2.SetActive(false);
+        correctItem3.SetActive(false);
+        correctItem4.SetActive(false);
+        wrongItem1.SetActive(false);
+        wrongItem2.SetActive(false);
+        wrongItem3.SetActive(false);
+        wrongItem4.SetActive(false);
+    }
 
+
+    public void checkHelp()
+    {
+        // stage 1 correct or wrong
+        if (buttonsPressed == 1 && myPotionManager.playerStage == 1 && correctItem1Stage1 == gameObject.name)
+        {
+            correctItem1.SetActive(true);
+        }
+        else if (buttonsPressed == 1 && myPotionManager.playerStage == 1 && correctItem1Stage1 != gameObject.name)
+        {
+            wrongItem1.SetActive(true);
+        }
+
+        if (buttonsPressed == 2 && myPotionManager.playerStage == 1 && correctItem2Stage1 == gameObject.name)
+        {
+            correctItem2.SetActive(true);
+        }
+        else if (buttonsPressed == 2 && myPotionManager.playerStage == 1 && correctItem2Stage1 != gameObject.name)
+        {
+            wrongItem2.SetActive(true);
+        }
+
+        // stage 2 correct or wrong
+        if (buttonsPressed == 1 && myPotionManager.playerStage == 2 && correctItem1Stage2 == gameObject.name)
+        {
+            correctItem1.SetActive(true);
+        }
+        else if (buttonsPressed == 1 && myPotionManager.playerStage == 2 && correctItem1Stage2 != gameObject.name)
+        {
+            wrongItem1.SetActive(true);
+        }
+
+        if (buttonsPressed == 2 && myPotionManager.playerStage == 2 && correctItem2Stage2 == gameObject.name)
+        {
+            correctItem2.SetActive(true);
+        }
+        else if (buttonsPressed == 2 && myPotionManager.playerStage == 2 && correctItem2Stage2 != gameObject.name)
+        {
+            wrongItem2.SetActive(true);
+        }
+
+        if (buttonsPressed == 3 && myPotionManager.playerStage == 2 && correctItem3Stage2 == gameObject.name)
+        {
+            correctItem3.SetActive(true);
+        }
+        else if (buttonsPressed == 3 && myPotionManager.playerStage == 2 && correctItem3Stage2 != gameObject.name)
+        {
+            wrongItem3.SetActive(true);
+        }
+
+        // stage 3 correct or wrong
+        if (buttonsPressed == 1 && myPotionManager.playerStage == 3 && correctItem1Stage3 == gameObject.name)
+        {
+            correctItem1.SetActive(true);
+        }
+        else if (buttonsPressed == 1 && myPotionManager.playerStage == 3 && correctItem1Stage3 != gameObject.name)
+        {
+            wrongItem1.SetActive(true);
+        }
+
+        if (buttonsPressed == 2 && myPotionManager.playerStage == 3 && correctItem2Stage3 == gameObject.name)
+        {
+            correctItem2.SetActive(true);
+        }
+        else if (buttonsPressed == 2 && myPotionManager.playerStage == 3 && correctItem2Stage3 != gameObject.name)
+        {
+            wrongItem2.SetActive(true);
+        }
+
+        if (buttonsPressed == 3 && myPotionManager.playerStage == 3 && correctItem3Stage3 == gameObject.name)
+        {
+            correctItem3.SetActive(true);
+        }
+        else if (buttonsPressed == 3 && myPotionManager.playerStage == 3 && correctItem3Stage3 != gameObject.name)
+        {
+            wrongItem3.SetActive(true);
+        }
+
+        if (buttonsPressed == 4 && myPotionManager.playerStage == 3 && correctItem4Stage3 == gameObject.name)
+        {
+            correctItem4.SetActive(true);
+        }
+        else if (buttonsPressed == 4 && myPotionManager.playerStage == 3 && correctItem4Stage3 != gameObject.name)
+        {
+            wrongItem4.SetActive(true);
+        }
+    }
+    
 
 }
     /*
