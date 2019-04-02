@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class PotionManager : MonoBehaviour
 {
 
-    [SerializeField]  private GameObject EyeBall, Frog, DeadFlower, ToadStool, Feather;
+    [SerializeField]  private GameObject EyeBall, Frog, DeadFlower, ToadStool, Feather, BloodVial;
     //[SerializeField]  private GameObject EyeBallOutline, FrogOutline, DeadFlowerOutline, ToadStoolOutline, FeatherOutline;
 
   
@@ -27,7 +27,7 @@ public class PotionManager : MonoBehaviour
 
 
         playerStage = 1;
-        Debug.Log(stage1Score);
+    
     }
 
     // Update is called once per frame
@@ -35,10 +35,14 @@ public class PotionManager : MonoBehaviour
     {
     }
 
-    public void eyeBallLevel1()
+    public void turnOn()
     {
-        stage1Score = stage1Score + 1;
-        Debug.Log(stage1Score);
+        EyeBall.SetActive(true);
+        Frog.SetActive(true);
+        DeadFlower.SetActive(true);
+        ToadStool.SetActive(true);
+        Feather.SetActive(true);
+        BloodVial.SetActive(true);
     }
   
 
