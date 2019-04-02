@@ -17,8 +17,13 @@ public class BeanGuyTrigger : MonoBehaviour
     public bool PotionCheck = false;
     public bool PotionObtained = false;
     public bool beanGameIntro = false;
-    
-    
+
+    public AudioClip speech1;
+    public AudioClip speech2;
+    public AudioSource audio;
+    public bool audioPlayed;
+    public bool audioPlayed2;
+
 
     [SerializeField] public GameObject[] beanTexts;
     [SerializeField] public GameObject[] SpeechImages;
@@ -40,6 +45,7 @@ public class BeanGuyTrigger : MonoBehaviour
         BeanGame = true;
         PotionGame = true;
         FindObjectOfType<WellWin>();
+        audio.GetComponent<AudioSource>();
 
     }
 
@@ -255,7 +261,10 @@ public class BeanGuyTrigger : MonoBehaviour
         public void DisplayBean()
         {
             ItemIcons[0].SetActive(true);
-        }
+            audio.PlayOneShot(speech2, 1f);
+            audioPlayed2 = true;
+
+    }
         
 
        
@@ -288,6 +297,8 @@ public class BeanGuyTrigger : MonoBehaviour
         PotionObtained = true;
         ItemIcons[2].SetActive(true);
         PotionCheck = true;
+        audio.PlayOneShot(speech1, 1f);
+        audioPlayed = true;
     }
 
     
