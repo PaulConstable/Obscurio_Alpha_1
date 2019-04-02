@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LoadingInsideHouse : MonoBehaviour {
 
     [SerializeField] public GameObject eButton;
+    public bool keypadLoaded;
 	
     public void OnTriggerStay2D(Collider2D collision)
     {
@@ -15,10 +16,11 @@ public class LoadingInsideHouse : MonoBehaviour {
         }
 
 
-        if(collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        if(collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && keypadLoaded == false)
         {
             
             SceneManager.LoadScene("KeypadGame", LoadSceneMode.Additive);
+            keypadLoaded = true;
 
         }
     }
@@ -29,6 +31,11 @@ public class LoadingInsideHouse : MonoBehaviour {
         {
             eButton.SetActive(false);
         }
+    }
+
+    public void LeftKeypad()
+    {
+        keypadLoaded = false;
     }
 
 }

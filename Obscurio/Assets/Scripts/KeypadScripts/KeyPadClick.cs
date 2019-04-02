@@ -6,20 +6,21 @@ using UnityEngine.SceneManagement;
 public class KeyPadClick : MonoBehaviour
 {
 
-    [SerializeField] public string correctCode = "7845";
+    [SerializeField] public string correctCode = "835";
     [SerializeField] public GameObject[] buttons;
   
     public static string playerCode = "";
 
     public static int buttonsPressed = 0;
 
+    LoadingInsideHouse myloadinginsidehouse;
 
 
     [SerializeField] private Text KeypadCode;
     // Use this for initialization
     void Start()
     {
-
+        myloadinginsidehouse = FindObjectOfType<LoadingInsideHouse>();
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class KeyPadClick : MonoBehaviour
 
         Debug.Log(playerCode);
         KeypadCode.text = "Code: " + playerCode;
-        if (buttonsPressed == 4)
+        if (buttonsPressed == 3)
         {
             if (playerCode == correctCode)
             {
@@ -54,7 +55,7 @@ public class KeyPadClick : MonoBehaviour
 
     void OnMouseUp()
     {
-        if (buttonsPressed < 4)
+        if (buttonsPressed < 3)
         {
             playerCode += gameObject.name;
             buttonsPressed += 1;
@@ -66,6 +67,7 @@ public class KeyPadClick : MonoBehaviour
         }
         if(gameObject.name == "Leave")
         {
+            myloadinginsidehouse.LeftKeypad();
             SceneManager.UnloadSceneAsync("KeypadGame");
         }
     }
