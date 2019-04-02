@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class LoadingLightGame : MonoBehaviour
 {
     public bool lightgameCompleted;
+    public bool lightGameLoaded;
     [SerializeField] public GameObject EButton;
     [SerializeField] public GameObject overlay;
     [SerializeField] public GameObject blocker;
@@ -17,9 +18,11 @@ public class LoadingLightGame : MonoBehaviour
             EButton.SetActive(true);
         }
 
-        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && lightgameCompleted == false)
+        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && lightgameCompleted == false && lightGameLoaded == false)
         {
             SceneManager.LoadScene("Light-Game", LoadSceneMode.Additive);
+            lightGameLoaded = true;
+
 
         }
     }
