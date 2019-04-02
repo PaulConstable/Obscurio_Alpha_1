@@ -14,7 +14,9 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 9357186629b0696429423de2bb8ac613
+    name: NarratorVol
   m_AudioMixerGroupViews:
   - guids:
     - a01a614dc0c949647a81f2ed2c1b0de9
