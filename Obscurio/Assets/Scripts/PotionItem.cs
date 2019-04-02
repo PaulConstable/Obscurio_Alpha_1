@@ -19,8 +19,8 @@ public class PotionItem : MonoBehaviour {
     [SerializeField] public string correctItem4Stage3 = "";
 
 
-    [SerializeField] GameObject correctItem1, correctItem2, correctItem3, correctItem4;
-    [SerializeField] GameObject wrongItem1, wrongItem2, wrongItem3, wrongItem4;
+    [SerializeField] GameObject correctItem1, correctItem2, correctItem3;
+    [SerializeField] GameObject wrongItem1, wrongItem2, wrongItem3;
 
     private string correctPotionStage1 = "";
     private string correctPotionStage2 = "";
@@ -128,11 +128,9 @@ public class PotionItem : MonoBehaviour {
         correctItem1.SetActive(false);
         correctItem2.SetActive(false);
         correctItem3.SetActive(false);
-        correctItem4.SetActive(false);
         wrongItem1.SetActive(false);
         wrongItem2.SetActive(false);
         wrongItem3.SetActive(false);
-        wrongItem4.SetActive(false);
     }
 
 
@@ -211,15 +209,6 @@ public class PotionItem : MonoBehaviour {
         else if (buttonsPressed == 3 && myPotionManager.playerStage == 3 && correctItem3Stage3 != gameObject.name)
         {
             wrongItem3.SetActive(true);
-        }
-
-        if (buttonsPressed == 4 && myPotionManager.playerStage == 3 && correctItem4Stage3 == gameObject.name)
-        {
-            correctItem4.SetActive(true);
-        }
-        else if (buttonsPressed == 4 && myPotionManager.playerStage == 3 && correctItem4Stage3 != gameObject.name)
-        {
-            wrongItem4.SetActive(true);
         }
     }
     
