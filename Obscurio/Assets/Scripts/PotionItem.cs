@@ -12,17 +12,19 @@ public class PotionItem : MonoBehaviour {
     public static string playerPotion = "";
     public static int buttonsPressed = 0;
 
+    public int TimesWrong;
     
 
     // Use this for initialization
     void Start() {
         myPotionManager = FindObjectOfType<PotionManager>();
+        
     }
 
     // Update is called once per frame
     void Update() {
 
-        Debug.Log(playerPotion);
+        //Debug.Log(playerPotion);
 
         if (buttonsPressed == 2 && myPotionManager.playerStage == 1)
         {
@@ -39,6 +41,8 @@ public class PotionItem : MonoBehaviour {
                 buttonsPressed = 0;
                 playerPotion = "";
                 myPotionManager.turnOn();
+                TimesWrong++;
+                
             }
         } else if (buttonsPressed == 3 && myPotionManager.playerStage == 2)
         {
@@ -55,6 +59,7 @@ public class PotionItem : MonoBehaviour {
                 buttonsPressed = 0;
                 playerPotion = "";
                 myPotionManager.turnOn();
+                TimesWrong++;
             }
         } else if (buttonsPressed == 4 && myPotionManager.playerStage == 3)
         {
@@ -71,6 +76,7 @@ public class PotionItem : MonoBehaviour {
                 buttonsPressed = 0;
                 playerPotion = "";
                 myPotionManager.turnOn();
+                TimesWrong++;
             }
         }
     }

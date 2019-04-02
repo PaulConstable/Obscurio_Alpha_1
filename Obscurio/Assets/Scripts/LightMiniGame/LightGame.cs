@@ -11,6 +11,7 @@ public class LightGame : MonoBehaviour
 
     public int clicks;
     [SerializeField] public GameObject[] Medals;
+    public bool levelDone;
 
   
 
@@ -44,6 +45,10 @@ public class LightGame : MonoBehaviour
     public void Update()
     {
         
+        if(levelDone == true && Input.GetKeyDown(KeyCode.E))
+        {
+            myLightGame.CompleteGame();
+        }
     }
 
     public void button1red()
@@ -239,8 +244,7 @@ public class LightGame : MonoBehaviour
         button8.interactable = false;
         button9.interactable = false;
 
-        //myLightGame.CompleteGame();
-        print(clicks);
+        levelDone = true;        print(clicks);
         if(clicks < 10)
         {
             Medals[0].SetActive(true);
