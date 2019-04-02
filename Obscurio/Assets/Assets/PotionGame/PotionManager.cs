@@ -132,4 +132,9 @@ public class PotionManager : MonoBehaviour
         BloodVial.SetActive(true);
         removeUI.SetActive(true);
     }
+
+    public void unloadScene()
+    {
+        SceneManager.UnloadSceneAsync("RecipeGame");
+    }
 }

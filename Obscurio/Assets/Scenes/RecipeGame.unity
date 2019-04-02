@@ -1912,7 +1912,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1193170219}
-        m_MethodName: resetGameStage3
+        m_MethodName: unloadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
