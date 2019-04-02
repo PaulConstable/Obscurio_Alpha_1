@@ -29,8 +29,9 @@ public class PotionItem : MonoBehaviour {
             if (playerPotion == correctPotionStage1)
             {
                 Debug.Log("Correct");
+                myPotionManager.turnOnUI1();
                 myPotionManager.playerStage = 2;
-                myPotionManager.turnOn();
+                
             }
             else
             {
@@ -44,8 +45,9 @@ public class PotionItem : MonoBehaviour {
             if (playerPotion == correctPotionStage2)
             {
                 Debug.Log("Correct");
+                myPotionManager.turnOnUI2();
                 myPotionManager.playerStage = 3;
-                myPotionManager.turnOn();
+                
             }
             else
             {
@@ -58,9 +60,10 @@ public class PotionItem : MonoBehaviour {
         {
             if (playerPotion == correctPotionStage3)
             {
+                myPotionManager.turnOnUI3();
                 Debug.Log("Correct");
                 myPotionManager.playerStage = 4;
-                myPotionManager.turnOn();
+              
             }
             else
             {
