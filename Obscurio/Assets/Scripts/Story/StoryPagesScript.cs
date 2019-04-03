@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class StoryPagesScript : MonoBehaviour {
 
 	// Use this for initialization
@@ -16,7 +16,11 @@ public class StoryPagesScript : MonoBehaviour {
 
     public void loadLevel1()
     {
-
+        SceneManager.LoadScene("1.JAB");
+    }
+    public void loadLevel2()
+    {
+        SceneManager.LoadScene("2.HAG");
     }
 }
 // well game

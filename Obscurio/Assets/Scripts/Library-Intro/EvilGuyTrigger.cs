@@ -9,7 +9,7 @@ public class EvilGuyTrigger : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("1.JAB");
+            SceneManager.LoadScene("BookStory");
         }
     }
 

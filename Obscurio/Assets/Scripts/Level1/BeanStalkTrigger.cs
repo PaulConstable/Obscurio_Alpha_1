@@ -67,8 +67,9 @@ public class BeanStalkTrigger : MonoBehaviour {
             eButton.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
             {
-                SceneManager.LoadScene("2.HAG");
+                SceneManager.LoadScene("ClimbingBean");
             }
+            
         }
 
 
