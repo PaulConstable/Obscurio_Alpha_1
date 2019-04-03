@@ -6,45 +6,42 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Test.unity
-    guid: bc8d5665560cec2449e41f4f48d70273
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Levels/Menu.unity
     guid: 4eebf06e22e2c8d47aede30fdc0b8add
   - enabled: 1
-    path: Assets/Scenes/SettingMenu.unity
-    guid: 09432bfea17cff1439a99c07d5680d11
-  - enabled: 1
-    path: Assets/Scenes/Library Scene.unity
+    path: Assets/Scenes/Levels/Library Scene.unity
     guid: e5495e2a4a701384ca6a3656d1b0f700
   - enabled: 1
-    path: Assets/Scenes/1.JAB.unity
+    path: Assets/Scenes/Levels/1.JAB.unity
     guid: ae05fc3f7fd1c384ebe76897ab46673c
   - enabled: 1
-    path: Assets/Scenes/BeanGame.unity
+    path: Assets/Scenes/Mini-Games/BeanGame.unity
     guid: 59ec9985520dedc4e8b9f1c313fc3274
   - enabled: 1
-    path: Assets/Scenes/Well-Jump_Game.unity
+    path: Assets/Scenes/Mini-Games/Well-Jump_Game.unity
     guid: 31b977cc2985a934ab7982d1a6e86da1
   - enabled: 1
-    path: Assets/Scenes/Puzzle-Game.unity
+    path: Assets/Scenes/Mini-Games/Puzzle-Game.unity
     guid: c3f7cf50a58c00848bed4f90a5bdf9a1
   - enabled: 1
-    path: Assets/Scenes/2.HAG.unity
+    path: Assets/Scenes/Levels/2.HAG.unity
     guid: e2dc02b6b949447429a0801cc1116c26
   - enabled: 1
-    path: Assets/Scenes/KeypadGame.unity
+    path: Assets/Scenes/Mini-Games/KeypadGame.unity
     guid: 4ae9647aff12781499d1f9bb57744c8e
   - enabled: 1
-    path: Assets/Scenes/InsideHAG.unity
+    path: Assets/Scenes/Levels/InsideHAG.unity
     guid: ef98dfda97bef7d4d8b9b4c7a418eb8a
   - enabled: 1
-    path: Assets/Scenes/Light-Game.unity
+    path: Assets/Scenes/Mini-Games/Light-Game.unity
     guid: 6d7debcfc1ac9ad4385a8fe06266e3c8
   - enabled: 1
-    path: Assets/Scenes/CardGame2.unity
+    path: Assets/Scenes/Mini-Games/CardGame2.unity
     guid: c0c7e81010dac294189b17af217d1dc0
   - enabled: 1
-    path: Assets/Scenes/RecipeGame.unity
+    path: Assets/Scenes/Mini-Games/RecipeGame.unity
     guid: 40a3657a30f0f7c44a2f7dcd09341023
   m_configObjects: {}
