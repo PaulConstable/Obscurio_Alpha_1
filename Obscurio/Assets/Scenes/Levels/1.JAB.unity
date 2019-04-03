@@ -8946,6 +8946,7 @@ GameObject:
   - component: {fileID: 1828655710}
   - component: {fileID: 1828655709}
   - component: {fileID: 1828655708}
+  - component: {fileID: 1828655712}
   m_Layer: 0
   m_Name: boy-01
   m_TagString: Player
@@ -9052,6 +9053,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  Animator: {fileID: 1828655712}
 --- !u!61 &1828655710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9097,6 +9099,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &1828655712
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1828655705}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 836edbbde5e6179419b00785d7aea4fc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1848116167
 GameObject:
   m_ObjectHideFlags: 0
