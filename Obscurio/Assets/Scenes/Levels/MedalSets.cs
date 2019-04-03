@@ -16,9 +16,15 @@ public class MedalSets : MonoBehaviour {
     public GameObject[] CardMedals;
     public GameObject[] PotionMedals;
 
+    public int Level1;
+    public int Level2;
+
     // Use this for initialization
     void Start () {
         myMedalManager = FindObjectOfType<MedalManager>();
+
+        Level1 = myMedalManager.Beans + myMedalManager.Well + myMedalManager.Squares;
+        Level2 = myMedalManager.Lights + myMedalManager.Cards + myMedalManager.Potions;
 	}
 	
 	// Update is called once per frame
@@ -104,6 +110,32 @@ public class MedalSets : MonoBehaviour {
             else if (myMedalManager.Potions == 3)
             {
                 PotionMedals[2].SetActive(true);
+            }
+
+            if(Level1 <5)
+            {
+                lvl1Medals[0].SetActive(true);
+            }
+            else if(Level1 >=5 && Level1 < 8)
+            {
+                lvl1Medals[1].SetActive(true);
+            }
+            else if(Level1 >=8)
+            {
+                lvl1Medals[2].SetActive(true);
+            }
+
+            if (Level2 < 5)
+            {
+                lvl2Medals[0].SetActive(true);
+            }
+            else if (Level2 >= 5 && Level2 < 8)
+            {
+                lvl2Medals[1].SetActive(true);
+            }
+            else if (Level2 >= 8)
+            {
+                lvl2Medals[2].SetActive(true);
             }
 
         }

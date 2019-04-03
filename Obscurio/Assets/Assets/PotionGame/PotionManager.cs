@@ -32,6 +32,7 @@ public class PotionManager : MonoBehaviour
     public AudioSource bronzeMedAudio;
 
     MedalManager myMedalManager;
+   
 
 
     // Use this for initialization
@@ -44,6 +45,7 @@ public class PotionManager : MonoBehaviour
         // FeatherOutline.SetActive(false);
 
         myMedalManager = FindObjectOfType<MedalManager>();
+        
 
         playerStage = 1;
 
@@ -60,7 +62,9 @@ public class PotionManager : MonoBehaviour
     {
         if(gameComplete == true && Input.GetKeyDown(KeyCode.E))
         {
+            
             SceneManager.UnloadSceneAsync("RecipeGame");
+            
         }
     }
 

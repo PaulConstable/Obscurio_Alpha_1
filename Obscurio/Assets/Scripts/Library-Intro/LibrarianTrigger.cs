@@ -46,6 +46,10 @@ public class LibrarianTrigger : MonoBehaviour {
         {
             librarianTexts[0].SetActive(false);
         }
+        if (collision.gameObject.tag == "Player" && librarianText == 2)
+        {
+            librarianTexts[1].SetActive(false);
+        }
     }
 
 

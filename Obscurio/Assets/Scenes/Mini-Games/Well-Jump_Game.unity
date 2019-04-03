@@ -166,6 +166,11 @@ Prefab:
       propertyPath: bounceObject
       value: 
       objectReference: {fileID: 1222060278}
+    - target: {fileID: 114590544225725094, guid: 04b7d4cf5e64ba8458a4e629d3a63ac0,
+        type: 2}
+      propertyPath: bounceAudio
+      value: 
+      objectReference: {fileID: 1222060280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04b7d4cf5e64ba8458a4e629d3a63ac0, type: 2}
   m_IsPrefabAsset: 0
@@ -623,6 +628,11 @@ Prefab:
       propertyPath: bounceObject
       value: 
       objectReference: {fileID: 1222060278}
+    - target: {fileID: 114128127150683998, guid: 2419507e902db8d48b42f2dfbf86bfd5,
+        type: 2}
+      propertyPath: bounceAudio
+      value: 
+      objectReference: {fileID: 1222060280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2419507e902db8d48b42f2dfbf86bfd5, type: 2}
   m_IsPrefabAsset: 0
@@ -757,6 +767,11 @@ Prefab:
       propertyPath: bounceObject
       value: 
       objectReference: {fileID: 1222060278}
+    - target: {fileID: 114405390494961142, guid: 77decfc23a6513249b2fbfb6bbdaae01,
+        type: 2}
+      propertyPath: bounceAudio
+      value: 
+      objectReference: {fileID: 1222060280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77decfc23a6513249b2fbfb6bbdaae01, type: 2}
   m_IsPrefabAsset: 0
@@ -919,7 +934,12 @@ Prefab:
         type: 2}
       propertyPath: bounceObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1222060278}
+    - target: {fileID: 114374464625150698, guid: 1ffafb8c0561a8444a8255177d54baef,
+        type: 2}
+      propertyPath: bounceAudio
+      value: 
+      objectReference: {fileID: 1222060280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ffafb8c0561a8444a8255177d54baef, type: 2}
   m_IsPrefabAsset: 0
@@ -976,6 +996,11 @@ Prefab:
       propertyPath: bounceObject
       value: 
       objectReference: {fileID: 1222060278}
+    - target: {fileID: 114374464625150698, guid: 1ffafb8c0561a8444a8255177d54baef,
+        type: 2}
+      propertyPath: bounceAudio
+      value: 
+      objectReference: {fileID: 1222060280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ffafb8c0561a8444a8255177d54baef, type: 2}
   m_IsPrefabAsset: 0
@@ -1040,6 +1065,11 @@ Prefab:
       propertyPath: bounceObject
       value: 
       objectReference: {fileID: 1222060278}
+    - target: {fileID: 114374464625150698, guid: 1ffafb8c0561a8444a8255177d54baef,
+        type: 2}
+      propertyPath: bounceAudio
+      value: 
+      objectReference: {fileID: 1222060280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ffafb8c0561a8444a8255177d54baef, type: 2}
   m_IsPrefabAsset: 0
@@ -1171,6 +1201,11 @@ Prefab:
       propertyPath: bounceObject
       value: 
       objectReference: {fileID: 1222060278}
+    - target: {fileID: 114374464625150698, guid: 1ffafb8c0561a8444a8255177d54baef,
+        type: 2}
+      propertyPath: bounceAudio
+      value: 
+      objectReference: {fileID: 1222060280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ffafb8c0561a8444a8255177d54baef, type: 2}
   m_IsPrefabAsset: 0
@@ -1427,6 +1462,11 @@ Prefab:
       propertyPath: bounceObject
       value: 
       objectReference: {fileID: 1222060278}
+    - target: {fileID: 114590544225725094, guid: 04b7d4cf5e64ba8458a4e629d3a63ac0,
+        type: 2}
+      propertyPath: bounceAudio
+      value: 
+      objectReference: {fileID: 1222060280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04b7d4cf5e64ba8458a4e629d3a63ac0, type: 2}
   m_IsPrefabAsset: 0
@@ -1575,6 +1615,11 @@ Prefab:
       propertyPath: bounceObject
       value: 
       objectReference: {fileID: 1222060278}
+    - target: {fileID: 114590544225725094, guid: 04b7d4cf5e64ba8458a4e629d3a63ac0,
+        type: 2}
+      propertyPath: bounceAudio
+      value: 
+      objectReference: {fileID: 1222060280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04b7d4cf5e64ba8458a4e629d3a63ac0, type: 2}
   m_IsPrefabAsset: 0
@@ -1894,6 +1939,11 @@ Prefab:
       propertyPath: bounceObject
       value: 
       objectReference: {fileID: 1222060278}
+    - target: {fileID: 114374464625150698, guid: 1ffafb8c0561a8444a8255177d54baef,
+        type: 2}
+      propertyPath: bounceAudio
+      value: 
+      objectReference: {fileID: 1222060280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ffafb8c0561a8444a8255177d54baef, type: 2}
   m_IsPrefabAsset: 0
@@ -1944,6 +1994,7 @@ MonoBehaviour:
   silverMedAudio: {fileID: 0}
   bronzeMedObject: {fileID: 1744531131}
   bronzeMedAudio: {fileID: 0}
+  medalwon: 0
 --- !u!61 &1878101313
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2431,6 +2482,11 @@ Prefab:
       propertyPath: bounceObject
       value: 
       objectReference: {fileID: 1222060278}
+    - target: {fileID: 114374464625150698, guid: 1ffafb8c0561a8444a8255177d54baef,
+        type: 2}
+      propertyPath: bounceAudio
+      value: 
+      objectReference: {fileID: 1222060280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ffafb8c0561a8444a8255177d54baef, type: 2}
   m_IsPrefabAsset: 0

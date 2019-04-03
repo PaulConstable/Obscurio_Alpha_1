@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/1.JAB.unity
     guid: ae05fc3f7fd1c384ebe76897ab46673c
   - enabled: 1
+    path: Assets/Scenes/Levels/2.HAG.unity
+    guid: e2dc02b6b949447429a0801cc1116c26
+  - enabled: 1
     path: Assets/Scenes/Mini-Games/BeanGame.unity
     guid: 59ec9985520dedc4e8b9f1c313fc3274
   - enabled: 1
@@ -26,9 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mini-Games/Puzzle-Game.unity
     guid: c3f7cf50a58c00848bed4f90a5bdf9a1
-  - enabled: 1
-    path: Assets/Scenes/Levels/2.HAG.unity
-    guid: e2dc02b6b949447429a0801cc1116c26
   - enabled: 1
     path: Assets/Scenes/Mini-Games/KeypadGame.unity
     guid: 4ae9647aff12781499d1f9bb57744c8e

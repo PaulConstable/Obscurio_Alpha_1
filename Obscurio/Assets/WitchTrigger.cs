@@ -25,13 +25,13 @@ public class WitchTrigger : MonoBehaviour {
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if(Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 0)
+        if(Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 0 && cardGameLoaded == false)
         {
             witchTexts[0].SetActive(true);
             eButton.SetActive(false);
             witchText = 1;
         }
-        else if(Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 1)
+        else if(Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 1 && cardGameLoaded == false)
         {
             witchTexts[0].SetActive(false);
             witchTexts[1].SetActive(true);
@@ -40,26 +40,69 @@ public class WitchTrigger : MonoBehaviour {
         }
         else if(Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 2 && cardGameLoaded == false)
         {
-            SceneManager.LoadScene("CardGame2", LoadSceneMode.Additive);
+            
             eButton.SetActive(false);
             witchTexts[1].SetActive(false);
-            cardGameLoaded = true;
+            witchTexts[2].SetActive(true);
+            witchText = 3;
+            
         }
-        else if (Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 3 && cardGameLoaded == true)
+        else if (Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 3 && cardGameLoaded == false)
         {
             eButton.SetActive(false);
             witchTexts[2].SetActive(false);
             witchTexts[3].SetActive(true);
             witchText = 4;
         }
-        else if(Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 4 && cardGameLoaded == true && dragGameLoaded == false)
+        else if(Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 4 && cardGameLoaded == false)
         {
             witchTexts[3].SetActive(false);
-            eButton.SetActive(false);
-            SceneManager.LoadScene("RecipeGame", LoadSceneMode.Additive);
-            dragGameLoaded = true;
             
+            eButton.SetActive(false);
+            
+            SceneManager.LoadScene("CardGame2", LoadSceneMode.Additive);
+            cardGameLoaded = true;
+            witchText = 5;
+
         }
+        else if(Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 5)
+        {
+            witchTexts[4].SetActive(true);
+            witchText = 6;
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 6)
+        {
+            witchTexts[4].SetActive(false);
+            witchTexts[5].SetActive(true);
+            witchText = 7;
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 7 && dragGameLoaded == false)
+        {
+            witchTexts[5].SetActive(false);
+            SceneManager.LoadScene("RecipeGame", LoadSceneMode.Additive);
+
+            dragGameLoaded = true;
+            witchText = 8;
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 8 && dragGameLoaded == true)
+        {
+            witchTexts[6].SetActive(true);
+            witchText = 9;
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 9 && dragGameLoaded == true)
+        {
+            witchTexts[6].SetActive(false);
+            witchTexts[7].SetActive(true);
+            witchText = 10;
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && witchText == 10 && dragGameLoaded == true)
+        {
+            witchTexts[7].SetActive(false);
+            SceneManager.LoadScene("OutroScene");
+        }
+
+
+
     }
 
     public void OnTriggerExit2D(Collider2D collision)
@@ -84,13 +127,24 @@ public class WitchTrigger : MonoBehaviour {
         {
             witchTexts[3].SetActive(false);
         }
+        if (collision.gameObject.tag == "Player" && witchText == 5)
+        {
+            witchTexts[4].SetActive(false);
+        }
+        if (collision.gameObject.tag == "Player" && witchText == 6)
+        {
+            witchTexts[5].SetActive(false);
+        }
+
     }
+
+   
 
     public void CompleteCardGame()
     {
         Debug.Log("cARD COMPELTE");
-        witchTexts[2].SetActive(true);
-        witchText = 3;
+        witchTexts[4].SetActive(true);
+        witchText = 5;
 
     }
 }

@@ -9,8 +9,7 @@ public class MedalManager : MonoBehaviour
 
     
 
-    public int Level1;
-    public int Level2;
+    
     public int Beans;
     public int Well;
     public int Squares;
