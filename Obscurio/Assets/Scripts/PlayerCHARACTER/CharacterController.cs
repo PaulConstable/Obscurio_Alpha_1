@@ -24,6 +24,8 @@ public class CharacterController : MonoBehaviour
 
     public UnityEvent OnLandEvent;
 
+    public Animator Animator;
+
     [System.Serializable]
     public class BoolEvent : UnityEvent<bool> { }
 
@@ -39,6 +41,18 @@ public class CharacterController : MonoBehaviour
     {
         bool wasGrounded = Grounded;
         Grounded = false;
+
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        {
+            Animator.SetFloat("Speed", 1);
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            Animator.SetFloat("Speed", 0);
+        }
+
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(GroundCheck.position, GroundedRadius, Ground);
             for (int i = 0; i< colliders.Length; i++)
@@ -57,16 +71,20 @@ public class CharacterController : MonoBehaviour
     {
         if (Grounded)
         {
+
+
             Vector3 targetVelocity = new Vector2(move * 10f, rb.velocity.y);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, SmoothMove);
-
             if (move > 0 && !FaceRight)
             {
                 Flip();
+                
+
             }
             else if (move < 0 && FaceRight)
             {
                 Flip();
+                
             }
         }
         if(Grounded && jump)
@@ -74,6 +92,7 @@ public class CharacterController : MonoBehaviour
             Grounded = false;
             rb.AddForce(new Vector2(0f, Jumping));
         }
+
     }
 
     private void Flip()
