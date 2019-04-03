@@ -4560,7 +4560,6 @@ Transform:
   - {fileID: 112791793}
   - {fileID: 1123503963}
   - {fileID: 394743701}
-  - {fileID: 1599546587}
   m_Father: {fileID: 746604835}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8178,75 +8177,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1590939051}
   m_CullTransparentMesh: 0
---- !u!1 &1599546586
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1599546587}
-  - component: {fileID: 1599546589}
-  - component: {fileID: 1599546588}
-  m_Layer: 0
-  m_Name: DigsHole
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1599546587
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1599546586}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.13, y: 3.47, z: -0.21983103}
-  m_LocalScale: {x: 4.78266, y: 3.225, z: 1}
-  m_Children: []
-  m_Father: {fileID: 914946129}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1599546588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1599546586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deae0671ca1d197489e80b5ac4e19501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speech1: {fileID: 8300000, guid: 8cf91c223b0f1604081079d9c814cdb2, type: 3}
-  audio: {fileID: 2065755345}
-  audioPlayed: 0
---- !u!61 &1599546589
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1599546586}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1604842301
 GameObject:
   m_ObjectHideFlags: 0
@@ -9034,7 +8964,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1828655705}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.6, y: 3.0969238, z: -0.13389353}
+  m_LocalPosition: {x: 65.45, y: 3.0969238, z: -0.13389353}
   m_LocalScale: {x: 0.16490701, y: 0.16490701, z: 0.16490701}
   m_Children:
   - {fileID: 1876759437}
@@ -9574,7 +9504,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 8f29d4e77390d0246b54e454c4be2711,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -10306,6 +10236,12 @@ MonoBehaviour:
   - {fileID: 1848116167}
   - {fileID: 2060242507}
   beanState: 0
+  speech1: {fileID: 8300000, guid: 8cf91c223b0f1604081079d9c814cdb2, type: 3}
+  audio: {fileID: 2065755345}
+  speech2: {fileID: 8300000, guid: 68fc861f58ddc5343938d53d7ebbbe15, type: 3}
+  audio2: {fileID: 2065755345}
+  speech3: {fileID: 8300000, guid: b31fc257ecbc6d94fa523f12193f691b, type: 3}
+  audio3: {fileID: 2065755345}
 --- !u!61 &1990083539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10502,7 +10438,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: feae20063cc86bc41987ed6d67564927,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -11011,7 +10947,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2141110053}
   - component: {fileID: 2141110052}
-  - component: {fileID: 2141110051}
   - component: {fileID: 2141110054}
   m_Layer: 0
   m_Name: Main Camera
@@ -11020,13 +10955,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2141110051
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2141110050}
-  m_Enabled: 1
 --- !u!20 &2141110052
 Camera:
   m_ObjectHideFlags: 0
@@ -11074,7 +11002,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2141110050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.1899986, y: 5.9469237, z: -10.133894}
+  m_LocalPosition: {x: 63.04, y: 5.9469237, z: -10.133894}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 746604835}

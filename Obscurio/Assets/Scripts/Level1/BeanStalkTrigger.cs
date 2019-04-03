@@ -11,9 +11,21 @@ public class BeanStalkTrigger : MonoBehaviour {
 
     BeanGuyTrigger myBeanGuyTrigger;
 
+    public AudioClip speech1;
+    public AudioSource audio;
+
+    public AudioClip speech2;
+    public AudioSource audio2;
+
+    public AudioClip speech3;
+    public AudioSource audio3;
+
     public void Start()
     {
         myBeanGuyTrigger = FindObjectOfType<BeanGuyTrigger>();
+        audio.GetComponent<AudioSource>();
+        audio2.GetComponent<AudioSource>();
+        audio3.GetComponent<AudioSource>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -24,7 +36,8 @@ public class BeanStalkTrigger : MonoBehaviour {
             {
                 stalks[0].SetActive(true);
                 myBeanGuyTrigger.BeanPlantedfunc();
-                
+                audio.PlayOneShot(speech1, 1f);
+
             }
         }
         if (collision.gameObject.tag == "Player" && beanState == 2)
@@ -34,6 +47,7 @@ public class BeanStalkTrigger : MonoBehaviour {
                 stalks[1].SetActive(true);
                 stalks[0].SetActive(false);
                 myBeanGuyTrigger.RemoveCan();
+                audio2.PlayOneShot(speech1, 1f);
             }
         }
         if (collision.gameObject.tag == "Player" && beanState == 3)
@@ -44,7 +58,8 @@ public class BeanStalkTrigger : MonoBehaviour {
                 stalks[1].SetActive(false);
                 myBeanGuyTrigger.RemovePotion();
                 beanState = 4;
-           
+                audio3.PlayOneShot(speech1, 1f);
+
             }
         }
         if(collision.gameObject.tag == "Player" && beanState == 4)

@@ -92,10 +92,10 @@ public class BeanSpawn : MonoBehaviour
             
             if(playerBeanScore >= 20 && playerBeanScore <= 39)
             {
-                
+                bronzeMedAudio.Play();
                 medals[0].SetActive(true);
                 CompleteLevel();
-                bronzeMedAudio.Play();
+                
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.UnloadSceneAsync("BeanGame");
@@ -103,10 +103,10 @@ public class BeanSpawn : MonoBehaviour
             }
             else if (playerBeanScore >=30 && playerBeanScore <= 59)
             {
-                
+                silverMedAudio.Play();
                 medals[1].SetActive(true);
                 CompleteLevel();
-                silverMedAudio.Play();
+                
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.UnloadSceneAsync("BeanGame");
@@ -115,10 +115,10 @@ public class BeanSpawn : MonoBehaviour
             }
             else if(playerBeanScore >=40)
             {
-                
+                goldMedAudio.Play();
                 medals[2].SetActive(true);
                 CompleteLevel();
-                goldMedAudio.Play();
+                
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.UnloadSceneAsync("BeanGame");

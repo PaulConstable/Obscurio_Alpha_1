@@ -20,10 +20,11 @@ public class DigHole : MonoBehaviour {
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && audioPlayed == false && myBeanGuyTrigger.BeanObtained == true && Input.GetKeyDown(KeyCode.E))
+        if (collision.tag == "Player" && audioPlayed == false && myBeanGuyTrigger.BeanObtained == true)
         {
-            audio.PlayOneShot(speech1, 1f);
-            audioPlayed = true;
+                audio.PlayOneShot(speech1, 1f);
+                audioPlayed = true;
+            
         }
 
 

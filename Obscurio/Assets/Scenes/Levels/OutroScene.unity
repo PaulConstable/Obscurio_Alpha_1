@@ -1170,7 +1170,7 @@ Prefab:
     - target: {fileID: 114159363371918852, guid: 5506cd68ae90df44a871fa83e15fa3c5,
         type: 2}
       propertyPath: m_text
-      value: Hello... Would you be able to help me?
+      value: Speech1
       objectReference: {fileID: 0}
     - target: {fileID: 114159363371918852, guid: 5506cd68ae90df44a871fa83e15fa3c5,
         type: 2}
@@ -1185,22 +1185,22 @@ Prefab:
     - target: {fileID: 114159363371918852, guid: 5506cd68ae90df44a871fa83e15fa3c5,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 38
-      objectReference: {fileID: 0}
-    - target: {fileID: 114159363371918852, guid: 5506cd68ae90df44a871fa83e15fa3c5,
-        type: 2}
-      propertyPath: m_textInfo.spaceCount
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114159363371918852, guid: 5506cd68ae90df44a871fa83e15fa3c5,
         type: 2}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114159363371918852, guid: 5506cd68ae90df44a871fa83e15fa3c5,
+        type: 2}
       propertyPath: m_textInfo.wordCount
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114159363371918852, guid: 5506cd68ae90df44a871fa83e15fa3c5,
         type: 2}
       propertyPath: m_textInfo.lineCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114159363371918852, guid: 5506cd68ae90df44a871fa83e15fa3c5,
         type: 2}
@@ -1459,7 +1459,7 @@ Prefab:
     - target: {fileID: 114159363371918852, guid: 5506cd68ae90df44a871fa83e15fa3c5,
         type: 2}
       propertyPath: m_text
-      value: Hello, what can i do for you?
+      value: Speech2
       objectReference: {fileID: 0}
     - target: {fileID: 114159363371918852, guid: 5506cd68ae90df44a871fa83e15fa3c5,
         type: 2}

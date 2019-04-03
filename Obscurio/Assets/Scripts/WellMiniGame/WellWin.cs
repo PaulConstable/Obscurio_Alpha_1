@@ -28,6 +28,8 @@ public class WellWin : MonoBehaviour
     public GameObject bronzeMedObject;
     public AudioSource bronzeMedAudio;
 
+    public bool medalwon;
+
     // Use this for initialization
     void Start()
     {
@@ -67,20 +69,23 @@ public class WellWin : MonoBehaviour
         introActive = true;
 
         outro.SetActive(true);
-        if(time <= 15)
+        if(time <= 15 && medalwon == false)
         {
             medals[2].SetActive(true);
             goldMedAudio.Play();
+            medalwon = true;
         }
-        if(time <=30)
+        if(time <=30 && medalwon == false)
         {
             medals[1].SetActive(true);
             silverMedAudio.Play();
+            medalwon = true;
         }
-        if(time > 30)
+        if(time > 30 && medalwon == false)
         {
             medals[0].SetActive(true);
             bronzeMedAudio.Play();
+            medalwon = true;
         }
 
         
