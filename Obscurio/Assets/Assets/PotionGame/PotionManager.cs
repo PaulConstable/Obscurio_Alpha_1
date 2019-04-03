@@ -31,16 +31,19 @@ public class PotionManager : MonoBehaviour
     public GameObject bronzeMedObject;
     public AudioSource bronzeMedAudio;
 
+    MedalManager myMedalManager;
+
 
     // Use this for initialization
     void Start()
     {
-       // EyeBallOutline.SetActive(false);
-       // FrogOutline.SetActive(false);
-       // DeadFlowerOutline.SetActive(false);
-       // ToadStoolOutline.SetActive(false);
-       // FeatherOutline.SetActive(false);
+        // EyeBallOutline.SetActive(false);
+        // FrogOutline.SetActive(false);
+        // DeadFlowerOutline.SetActive(false);
+        // ToadStoolOutline.SetActive(false);
+        // FeatherOutline.SetActive(false);
 
+        myMedalManager = FindObjectOfType<MedalManager>();
 
         playerStage = 1;
 
@@ -102,16 +105,19 @@ public class PotionManager : MonoBehaviour
         {
             medals[0].SetActive(true);
             goldMedAudio.Play();
+            myMedalManager.SetPotionGold();
         }
         if(myPotionItem.TimesWrong >10 && myPotionItem.TimesWrong <=20)
         {
             medals[1].SetActive(true);
             silverMedAudio.Play();
+            myMedalManager.SetPotionSilver();
         }
         if(myPotionItem.TimesWrong > 30)
         {
             medals[2].SetActive(true);
             bronzeMedAudio.Play();
+            myMedalManager.SetPotionBronze();
         }
 
     }

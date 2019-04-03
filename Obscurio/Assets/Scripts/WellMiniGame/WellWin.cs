@@ -30,6 +30,8 @@ public class WellWin : MonoBehaviour
 
     public bool medalwon;
 
+    MedalManager myMedalManager;
+
     // Use this for initialization
     void Start()
     {
@@ -42,6 +44,8 @@ public class WellWin : MonoBehaviour
         bronzeMedAudio = bronzeMedObject.GetComponent<AudioSource>();
         silverMedAudio = silverMedObject.GetComponent<AudioSource>();
         goldMedAudio = goldMedObject.GetComponent<AudioSource>();
+
+        myMedalManager = FindObjectOfType<MedalManager>();
     }
 
     // Update is called once per frame
@@ -74,18 +78,21 @@ public class WellWin : MonoBehaviour
             medals[2].SetActive(true);
             goldMedAudio.Play();
             medalwon = true;
+            myMedalManager.SetWellGold();
         }
         if(time <=30 && medalwon == false)
         {
             medals[1].SetActive(true);
             silverMedAudio.Play();
             medalwon = true;
+            myMedalManager.SetWellSilver();
         }
         if(time > 30 && medalwon == false)
         {
             medals[0].SetActive(true);
             bronzeMedAudio.Play();
             medalwon = true;
+            myMedalManager.SetWellBronze();
         }
 
         

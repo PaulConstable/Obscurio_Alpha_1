@@ -42,12 +42,14 @@ public class BeanSpawn : MonoBehaviour
 
     BeanStalkTrigger myBeanStalkTrigger;
     BeanGuyTrigger myBeanGuyTrigger;
+    MedalManager myMedalManager;
     
     void Start()
     {
 
         myBeanStalkTrigger = FindObjectOfType<BeanStalkTrigger>();
         myBeanGuyTrigger = FindObjectOfType<BeanGuyTrigger>();
+        myMedalManager = FindObjectOfType<MedalManager>();
 
         
         goldAudio = goldSound.GetComponent<AudioSource>();
@@ -87,6 +89,7 @@ public class BeanSpawn : MonoBehaviour
                     SceneManager.LoadScene("BeanGame", LoadSceneMode.Additive);
                     outro.SetActive(false);
                     medals[3].SetActive(false);
+                    
                 }
             }
             
@@ -95,10 +98,13 @@ public class BeanSpawn : MonoBehaviour
                 bronzeMedAudio.Play();
                 medals[0].SetActive(true);
                 CompleteLevel();
+                myMedalManager.SetBeanBronze();
+                
                 
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.UnloadSceneAsync("BeanGame");
+                    
                 }
             }
             else if (playerBeanScore >=30 && playerBeanScore <= 59)
@@ -106,10 +112,13 @@ public class BeanSpawn : MonoBehaviour
                 silverMedAudio.Play();
                 medals[1].SetActive(true);
                 CompleteLevel();
+                myMedalManager.SetBeanSilver();
                 
-                if(Input.GetKeyDown(KeyCode.E))
+
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.UnloadSceneAsync("BeanGame");
+                    
                 }
                 
             }
@@ -118,6 +127,7 @@ public class BeanSpawn : MonoBehaviour
                 goldMedAudio.Play();
                 medals[2].SetActive(true);
                 CompleteLevel();
+                myMedalManager.SetBeanGold();
                 
                 if(Input.GetKeyDown(KeyCode.E))
                 {

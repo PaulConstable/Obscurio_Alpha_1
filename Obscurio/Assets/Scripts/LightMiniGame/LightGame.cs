@@ -13,6 +13,7 @@ public class LightGame : MonoBehaviour
     [SerializeField] public GameObject[] Medals;
     public bool levelDone;
 
+    MedalManager myMedalManager;
   
 
     [SerializeField] public Button button1;
@@ -55,6 +56,8 @@ public class LightGame : MonoBehaviour
         bronzeMedAudio = bronzeMedObject.GetComponent<AudioSource>();
         silverMedAudio = silverMedObject.GetComponent<AudioSource>();
         goldMedAudio = goldMedObject.GetComponent<AudioSource>();
+
+        myMedalManager = FindObjectOfType<MedalManager>();
 
 
     }
@@ -266,16 +269,19 @@ public class LightGame : MonoBehaviour
         {
             Medals[0].SetActive(true);
             goldMedAudio.Play();
+            myMedalManager.SetCardGold();
         }
         if(clicks > 10 && clicks <=20)
         {
             Medals[1].SetActive(true);
             silverMedAudio.Play();
+            myMedalManager.SetCardSilver();
         }
         if(clicks > 20)
         {
             Medals[2].SetActive(true);
             bronzeMedAudio.Play();
+            myMedalManager.SetCardBronze();
         }
         
     }

@@ -870,86 +870,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 258379359}
   m_CullTransparentMesh: 0
---- !u!1 &457719545
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 457719547}
-  - component: {fileID: 457719546}
-  m_Layer: 0
-  m_Name: MedalManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &457719546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 457719545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df28a8e086a5b144daa0e79227bd4b9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Level1: 0
-  Level2: 0
-  Beans: 0
-  Well: 0
-  Squares: 0
-  Lights: 0
-  Cards: 0
-  Potions: 0
-  lvl1Medals:
-  - {fileID: 2008402324}
-  - {fileID: 1349350502}
-  - {fileID: 1181757776}
-  lvl2Medals:
-  - {fileID: 149199607}
-  - {fileID: 994448984}
-  - {fileID: 1722027882}
-  BeanMedals:
-  - {fileID: 1393929133}
-  - {fileID: 759792016}
-  - {fileID: 692366239}
-  WellMedals:
-  - {fileID: 933312049}
-  - {fileID: 210654601}
-  - {fileID: 1241103889}
-  Squaremedals:
-  - {fileID: 1878929594}
-  - {fileID: 258379359}
-  - {fileID: 1853192423}
-  LightMedals:
-  - {fileID: 842175094}
-  - {fileID: 1900164942}
-  - {fileID: 184381951}
-  CardMedals:
-  - {fileID: 1268971296}
-  - {fileID: 2113394824}
-  - {fileID: 614202365}
-  PotionMedals:
-  - {fileID: 2103937727}
-  - {fileID: 1260232449}
-  - {fileID: 462007279}
---- !u!4 &457719547
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 457719545}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1349.2009, y: 436.09348, z: -12.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &462007279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,11 +1344,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1460,7 +1380,7 @@ GameObject:
   - component: {fileID: 692366242}
   - component: {fileID: 692366241}
   m_Layer: 5
-  m_Name: Image (15)
+  m_Name: BeanBronze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1795,7 +1715,7 @@ GameObject:
   - component: {fileID: 759792019}
   - component: {fileID: 759792018}
   m_Layer: 5
-  m_Name: Image (14)
+  m_Name: BeanSilver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1922,6 +1842,338 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 842175094}
   m_CullTransparentMesh: 0
+--- !u!1001 &865873794
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: WellMedals.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: BeanMedals.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl2Medals.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: CardMedals.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: LightMedals.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: PotionMedals.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462470712107072, guid: 98083887d400fb844a94f98f4cc06cfc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1349.2009
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462470712107072, guid: 98083887d400fb844a94f98f4cc06cfc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 436.09348
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462470712107072, guid: 98083887d400fb844a94f98f4cc06cfc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -12.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462470712107072, guid: 98083887d400fb844a94f98f4cc06cfc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462470712107072, guid: 98083887d400fb844a94f98f4cc06cfc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462470712107072, guid: 98083887d400fb844a94f98f4cc06cfc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462470712107072, guid: 98083887d400fb844a94f98f4cc06cfc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462470712107072, guid: 98083887d400fb844a94f98f4cc06cfc, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[0]
+      value: 
+      objectReference: {fileID: 2008402324}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[1]
+      value: 
+      objectReference: {fileID: 1349350502}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[2]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl2Medals.Array.data[0]
+      value: 
+      objectReference: {fileID: 149199607}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl2Medals.Array.data[1]
+      value: 
+      objectReference: {fileID: 994448984}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl2Medals.Array.data[2]
+      value: 
+      objectReference: {fileID: 1722027882}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: BeanMedals.Array.data[0]
+      value: 
+      objectReference: {fileID: 1393929133}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: BeanMedals.Array.data[1]
+      value: 
+      objectReference: {fileID: 759792016}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: BeanMedals.Array.data[2]
+      value: 
+      objectReference: {fileID: 692366239}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: WellMedals.Array.data[0]
+      value: 
+      objectReference: {fileID: 933312049}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: WellMedals.Array.data[1]
+      value: 
+      objectReference: {fileID: 210654601}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: WellMedals.Array.data[2]
+      value: 
+      objectReference: {fileID: 1241103889}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: Squaremedals.Array.data[0]
+      value: 
+      objectReference: {fileID: 1878929594}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: Squaremedals.Array.data[1]
+      value: 
+      objectReference: {fileID: 258379359}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: Squaremedals.Array.data[2]
+      value: 
+      objectReference: {fileID: 1853192423}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: LightMedals.Array.data[0]
+      value: 
+      objectReference: {fileID: 842175094}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: LightMedals.Array.data[1]
+      value: 
+      objectReference: {fileID: 1900164942}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: LightMedals.Array.data[2]
+      value: 
+      objectReference: {fileID: 184381951}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: CardMedals.Array.data[0]
+      value: 
+      objectReference: {fileID: 1268971296}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: CardMedals.Array.data[1]
+      value: 
+      objectReference: {fileID: 2113394824}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: CardMedals.Array.data[2]
+      value: 
+      objectReference: {fileID: 614202365}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: PotionMedals.Array.data[0]
+      value: 
+      objectReference: {fileID: 2103937727}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: PotionMedals.Array.data[1]
+      value: 
+      objectReference: {fileID: 1260232449}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: PotionMedals.Array.data[2]
+      value: 
+      objectReference: {fileID: 462007279}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[3]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[4]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[5]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[6]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[7]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[8]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[9]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[10]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[11]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[12]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[13]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[14]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[15]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[16]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[17]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[18]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[19]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[20]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[21]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[22]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[23]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[24]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[25]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[26]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[27]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[28]
+      value: 
+      objectReference: {fileID: 1181757776}
+    - target: {fileID: 114531438927475708, guid: 98083887d400fb844a94f98f4cc06cfc,
+        type: 2}
+      propertyPath: lvl1Medals.Array.data[29]
+      value: 
+      objectReference: {fileID: 1181757776}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98083887d400fb844a94f98f4cc06cfc, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &933312049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,11 +2587,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2716,7 +2968,7 @@ GameObject:
   - component: {fileID: 1393929136}
   - component: {fileID: 1393929135}
   m_Layer: 5
-  m_Name: Image (13)
+  m_Name: BeanBronze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3462,11 +3714,11 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3858,6 +4110,72 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1900164942}
   m_CullTransparentMesh: 0
+--- !u!1 &2003731106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2003731108}
+  - component: {fileID: 2003731107}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2003731107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2003731106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3abb33466c83309478fd68f844fa429d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvl1Medals: []
+  lvl2Medals: []
+  BeanMedals:
+  - {fileID: 1393929133}
+  - {fileID: 759792016}
+  - {fileID: 692366239}
+  WellMedals:
+  - {fileID: 933312049}
+  - {fileID: 210654601}
+  - {fileID: 1241103889}
+  SquareMedals:
+  - {fileID: 1878929594}
+  - {fileID: 258379359}
+  - {fileID: 1853192423}
+  LightMedals:
+  - {fileID: 842175094}
+  - {fileID: 1900164942}
+  - {fileID: 184381951}
+  CardMedals:
+  - {fileID: 1268971296}
+  - {fileID: 2113394824}
+  - {fileID: 614202365}
+  PotionMedals:
+  - {fileID: 2103937727}
+  - {fileID: 1260232449}
+  - {fileID: 462007279}
+--- !u!4 &2003731108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2003731106}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1227.2135, y: 425.2353, z: -11.67647}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2008402324
 GameObject:
   m_ObjectHideFlags: 0
@@ -4298,11 +4616,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:

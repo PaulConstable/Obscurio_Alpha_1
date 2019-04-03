@@ -59,35 +59,11 @@ MonoBehaviour:
   Lights: 0
   Cards: 0
   Potions: 0
-  lvl1Medals:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  lvl2Medals:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  BeanMedals:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  WellMedals:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Squaremedals:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  LightMedals:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  CardMedals:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  PotionMedals:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  lvl1Medals: []
+  lvl2Medals: []
+  BeanMedals: []
+  WellMedals: []
+  SquareMedals: []
+  LightMedals: []
+  CardMedals: []
+  PotionMedals: []

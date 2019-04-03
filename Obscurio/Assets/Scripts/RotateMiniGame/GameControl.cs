@@ -30,6 +30,8 @@ public class GameControl : MonoBehaviour {
     public GameObject bronzeMedObject;
     public AudioSource bronzeMedAudio;
 
+    MedalManager myMedalManager;
+
     // Use this for initialization
     void Start () {
         winText.SetActive(false);
@@ -41,6 +43,8 @@ public class GameControl : MonoBehaviour {
         bronzeMedAudio = bronzeMedObject.GetComponent<AudioSource>();
         silverMedAudio = silverMedObject.GetComponent<AudioSource>();
         goldMedAudio = goldMedObject.GetComponent<AudioSource>();
+
+        myMedalManager = FindObjectOfType<MedalManager>();
 
     }
 
@@ -71,18 +75,21 @@ public class GameControl : MonoBehaviour {
             {
                 goldMedAudio.Play();
                 medals[2].SetActive(true);
+                myMedalManager.SetSquareGold();
                 
             }
             if(myPuzzleGame.timeTaken > 40 && myPuzzleGame.timeTaken < 70)
             {
                 silverMedAudio.Play();
                 medals[1].SetActive(true);
+                myMedalManager.SetSquareSilver();
                 
             }
             if(myPuzzleGame.timeTaken >= 70)
             {
                 bronzeMedAudio.Play();
                 medals[0].SetActive(true);
+                myMedalManager.SetSquareBronze();
                 
             }
             

@@ -31,14 +31,19 @@ public class SceneController : MonoBehaviour {
     public GameObject bronzeMedObject;
     public AudioSource bronzeMedAudio;
 
+    MedalManager myMedalManager;
+
     private void Start()
     {
         mywitchTrigger = FindObjectOfType<WitchTrigger>();
         flipAudio = flipObject.GetComponent<AudioSource>();
+        myMedalManager = FindObjectOfType<MedalManager>();
 
         bronzeMedAudio = bronzeMedObject.GetComponent<AudioSource>();
         silverMedAudio = silverMedObject.GetComponent<AudioSource>();
         goldMedAudio = goldMedObject.GetComponent<AudioSource>();
+
+
 
         Vector3 startPos = originalCard.transform.position;
 
@@ -131,16 +136,19 @@ public class SceneController : MonoBehaviour {
                 {
                     medals[0].SetActive(true);
                     goldMedAudio.Play();
+                    myMedalManager.SetCardGold();
                 }
                 if(noOfClicks <=15 && noOfClicks > 10)
                 {
                     medals[1].SetActive(true);
                     silverMedAudio.Play();
+                    myMedalManager.SetCardSilver();
                 }
                 if(noOfClicks > 15)
                 {
                     medals[2].SetActive(true);
                     bronzeMedAudio.Play();
+                    myMedalManager.SetCardBronze();
                 }
                 
             }

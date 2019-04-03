@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MedalManager : MonoBehaviour
 {
+
+    
 
     public int Level1;
     public int Level2;
@@ -14,14 +17,9 @@ public class MedalManager : MonoBehaviour
     public int Lights;
     public int Cards;
     public int Potions;
-    public GameObject[] lvl1Medals;
-    public GameObject[] lvl2Medals;
-    public GameObject[] BeanMedals;
-    public GameObject[] WellMedals;
-    public GameObject[] SquareMedals;
-    public GameObject[] LightMedals;
-    public GameObject[] CardMedals;
-    public GameObject[] PotionMedals;
+    
+
+    
 
     private void Awake()
     {
@@ -35,56 +33,16 @@ public class MedalManager : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
+
+        
     }
 
 
     public void Start()
     {
+        
 
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
-
-        if (sceneName == "Medal Scene")
-        {
-            if (Beans == 1)
-            {
-                BeanMedals[0].SetActive(true);
-            }
-            else if (Beans == 2)
-            {
-                BeanMedals[1].SetActive(true);
-            }
-            else if (Beans == 3)
-            {
-                BeanMedals[2].SetActive(true);
-            }
-
-            if (Well == 1)
-            {
-                WellMedals[0].SetActive(true);
-            }
-            else if (Well == 2)
-            {
-                WellMedals[1].SetActive(true);
-            }
-            else if (Well == 3)
-            {
-                WellMedals[2].SetActive(true);
-            }
-
-            if (Squares == 1)
-            {
-                SquareMedals[0].SetActive(true);
-            }
-            else if (Squares == 2)
-            {
-                SquareMedals[1].SetActive(true);
-            }
-            else if (Squares == 3)
-            {
-                SquareMedals[2].SetActive(true);
-            }
-        }
+        
     }
 
     public void SetBeanBronze()
@@ -122,6 +80,43 @@ public class MedalManager : MonoBehaviour
     public void SetSquareGold()
     {
         Squares = 3;
+    }
+    public void SetLightBronze()
+    {
+        Lights = 1;
+    }
+    public void SetLightSilver()
+    {
+        Lights = 2;
+    }
+    public void SetLightGold()
+    {
+        Lights = 3;
+    }
+    public void SetCardBronze()
+    {
+        Cards = 1;
+    }
+    public void SetCardSilver()
+    {
+        Cards = 2;
+    }
+    public void SetCardGold()
+    {
+        Cards = 3;
+    }
+
+    public void SetPotionBronze()
+    {
+        Potions = 1;
+    }
+    public void SetPotionSilver()
+    {
+        Potions = 2;
+    }
+    public void SetPotionGold()
+    {
+        Potions = 3;
     }
 
 

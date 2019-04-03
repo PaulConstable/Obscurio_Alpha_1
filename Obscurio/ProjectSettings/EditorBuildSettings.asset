@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mini-Games/RecipeGame.unity
     guid: 40a3657a30f0f7c44a2f7dcd09341023
+  - enabled: 1
+    path: Assets/Scenes/Levels/OutroScene.unity
+    guid: 1526b03ec5acd13459a9a62e250cf30a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Medal Scene.unity
+    guid: 3b75532fbea359649998eb3b925458dc
   m_configObjects: {}
