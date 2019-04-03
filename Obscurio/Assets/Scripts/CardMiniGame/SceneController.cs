@@ -19,9 +19,26 @@ public class SceneController : MonoBehaviour {
     WitchTrigger mywitchTrigger;
     public int noOfClicks;
 
+    public GameObject flipObject;
+    public AudioSource flipAudio;
+
+    public GameObject goldMedObject;
+    public AudioSource goldMedAudio;
+
+    public GameObject silverMedObject;
+    public AudioSource silverMedAudio;
+
+    public GameObject bronzeMedObject;
+    public AudioSource bronzeMedAudio;
+
     private void Start()
     {
         mywitchTrigger = FindObjectOfType<WitchTrigger>();
+        flipAudio = flipObject.GetComponent<AudioSource>();
+
+        bronzeMedAudio = bronzeMedObject.GetComponent<AudioSource>();
+        silverMedAudio = silverMedObject.GetComponent<AudioSource>();
+        goldMedAudio = goldMedObject.GetComponent<AudioSource>();
 
         Vector3 startPos = originalCard.transform.position;
 
@@ -86,12 +103,14 @@ public class SceneController : MonoBehaviour {
         if (_firstRevealed == null)
         {
             _firstRevealed = card;
+            flipAudio.Play();
         }
         else
         {
             _secondRevealed = card;
             StartCoroutine(CheckMatch());
             noOfClicks++;
+            flipAudio.Play();
             Debug.Log(noOfClicks);
         }
     }
@@ -111,14 +130,17 @@ public class SceneController : MonoBehaviour {
                 if(noOfClicks <=10)
                 {
                     medals[0].SetActive(true);
+                    goldMedAudio.Play();
                 }
                 if(noOfClicks <=15 && noOfClicks > 10)
                 {
                     medals[1].SetActive(true);
+                    silverMedAudio.Play();
                 }
                 if(noOfClicks > 15)
                 {
                     medals[2].SetActive(true);
+                    bronzeMedAudio.Play();
                 }
                 
             }

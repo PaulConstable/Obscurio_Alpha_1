@@ -19,6 +19,15 @@ public class WellWin : MonoBehaviour
     public static bool youWin;
     public float time = 0f;
 
+    public GameObject goldMedObject;
+    public AudioSource goldMedAudio;
+
+    public GameObject silverMedObject;
+    public AudioSource silverMedAudio;
+
+    public GameObject bronzeMedObject;
+    public AudioSource bronzeMedAudio;
+
     // Use this for initialization
     void Start()
     {
@@ -27,6 +36,10 @@ public class WellWin : MonoBehaviour
         myBeanGuyTrigger = FindObjectOfType<BeanGuyTrigger>();
         myBeanStalkTrigger = FindObjectOfType<BeanStalkTrigger>();
         myWellGameTrigger = FindObjectOfType<WellGameTrigger>();
+
+        bronzeMedAudio = bronzeMedObject.GetComponent<AudioSource>();
+        silverMedAudio = silverMedObject.GetComponent<AudioSource>();
+        goldMedAudio = goldMedObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -57,14 +70,17 @@ public class WellWin : MonoBehaviour
         if(time <= 15)
         {
             medals[2].SetActive(true);
+            goldMedAudio.Play();
         }
         if(time <=30)
         {
             medals[1].SetActive(true);
+            silverMedAudio.Play();
         }
         if(time > 30)
         {
             medals[0].SetActive(true);
+            bronzeMedAudio.Play();
         }
 
         

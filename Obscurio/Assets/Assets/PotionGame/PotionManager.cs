@@ -22,6 +22,15 @@ public class PotionManager : MonoBehaviour
     public bool gameComplete;
     public GameObject removeUI;
 
+    public GameObject goldMedObject;
+    public AudioSource goldMedAudio;
+
+    public GameObject silverMedObject;
+    public AudioSource silverMedAudio;
+
+    public GameObject bronzeMedObject;
+    public AudioSource bronzeMedAudio;
+
 
     // Use this for initialization
     void Start()
@@ -36,7 +45,11 @@ public class PotionManager : MonoBehaviour
         playerStage = 1;
 
         myPotionItem = FindObjectOfType<PotionItem>();
-    
+
+        bronzeMedAudio = bronzeMedObject.GetComponent<AudioSource>();
+        silverMedAudio = silverMedObject.GetComponent<AudioSource>();
+        goldMedAudio = goldMedObject.GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -88,14 +101,17 @@ public class PotionManager : MonoBehaviour
         if (myPotionItem.TimesWrong <=10)
         {
             medals[0].SetActive(true);
+            goldMedAudio.Play();
         }
         if(myPotionItem.TimesWrong >10 && myPotionItem.TimesWrong <=20)
         {
             medals[1].SetActive(true);
+            silverMedAudio.Play();
         }
         if(myPotionItem.TimesWrong > 30)
         {
             medals[2].SetActive(true);
+            bronzeMedAudio.Play();
         }
 
     }

@@ -15,12 +15,21 @@ public class KeyPadClick : MonoBehaviour
 
     LoadingInsideHouse myloadinginsidehouse;
 
+    public GameObject clickObject;
+    public AudioSource clickAudio;
+
+    public GameObject wrongObject;
+    public AudioSource wrongAudio;
+
 
     [SerializeField] private Text KeypadCode;
     // Use this for initialization
     void Start()
     {
         myloadinginsidehouse = FindObjectOfType<LoadingInsideHouse>();
+
+        clickAudio = clickObject.GetComponent<AudioSource>();
+        wrongAudio = wrongObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -45,6 +54,7 @@ public class KeyPadClick : MonoBehaviour
                 Debug.Log("Wrong");
                 buttonsPressed = 0;
                 playerCode = "";
+                wrongAudio.Play();
       
 
             }
@@ -59,11 +69,13 @@ public class KeyPadClick : MonoBehaviour
         {
             playerCode += gameObject.name;
             buttonsPressed += 1;
+            clickAudio.Play();
         }
         if (gameObject.name == "Reset")
         {
             playerCode = "";
             buttonsPressed = 0;
+            clickAudio.Play();
         }
         if(gameObject.name == "Leave")
         {

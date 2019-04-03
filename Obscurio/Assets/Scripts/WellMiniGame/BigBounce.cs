@@ -5,9 +5,14 @@ using UnityEngine;
 public class BigBounce : MonoBehaviour
 {
 
+    public GameObject bounceObject;
+    public AudioSource bounceAudio;
+
+
     // Use this for initialization
     void Start()
     {
+        bounceAudio = bounceObject.GetComponent<AudioSource>();
 
     }
 
@@ -21,6 +26,7 @@ public class BigBounce : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0)
         {
+            bounceAudio.Play();
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector3.up * 675);
         }
     }

@@ -17,6 +17,23 @@ public class BeanSpawn : MonoBehaviour
 
     public bool GameOver;
 
+    public GameObject goldSound;
+    public AudioSource goldAudio;
+
+    public GameObject redSound;
+    public AudioSource redAudio;
+
+    public GameObject blackSound;
+    public AudioSource blackAudio;
+
+    public GameObject goldMedObject;
+    public AudioSource goldMedAudio;
+
+    public GameObject silverMedObject;
+    public AudioSource silverMedAudio;
+
+    public GameObject bronzeMedObject;
+    public AudioSource bronzeMedAudio;
 
     // text
     public Text beanPlayerScore;
@@ -32,6 +49,13 @@ public class BeanSpawn : MonoBehaviour
         myBeanStalkTrigger = FindObjectOfType<BeanStalkTrigger>();
         myBeanGuyTrigger = FindObjectOfType<BeanGuyTrigger>();
 
+        
+        goldAudio = goldSound.GetComponent<AudioSource>();
+        redAudio = redSound.GetComponent<AudioSource>();
+        blackAudio = blackSound.GetComponent <AudioSource>();
+        bronzeMedAudio = bronzeMedObject.GetComponent<AudioSource>();
+        silverMedAudio = silverMedObject.GetComponent<AudioSource>();
+        goldMedAudio = goldMedObject.GetComponent<AudioSource>();
         
             InvokeRepeating("BlackBeanInstance", spawnTimeBlackBean, spawnTimeBlackBean);
 
@@ -56,6 +80,7 @@ public class BeanSpawn : MonoBehaviour
             {
                 outro.SetActive(true);
                 medals[3].SetActive(true);
+                
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.UnloadSceneAsync("BeanGame");
@@ -70,6 +95,7 @@ public class BeanSpawn : MonoBehaviour
                 
                 medals[0].SetActive(true);
                 CompleteLevel();
+                bronzeMedAudio.Play();
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.UnloadSceneAsync("BeanGame");
@@ -80,6 +106,7 @@ public class BeanSpawn : MonoBehaviour
                 
                 medals[1].SetActive(true);
                 CompleteLevel();
+                silverMedAudio.Play();
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.UnloadSceneAsync("BeanGame");
@@ -91,6 +118,7 @@ public class BeanSpawn : MonoBehaviour
                 
                 medals[2].SetActive(true);
                 CompleteLevel();
+                goldMedAudio.Play();
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.UnloadSceneAsync("BeanGame");
@@ -150,6 +178,9 @@ public class BeanSpawn : MonoBehaviour
             Destroy(bean.gameObject);
             playerBeanScore = playerBeanScore -1;
             print(playerBeanScore);
+            blackAudio.Play();
+            
+
         }
       
       else if (bean.gameObject.tag == "Red")
@@ -157,6 +188,10 @@ public class BeanSpawn : MonoBehaviour
             Destroy(bean.gameObject);
             playerBeanScore = playerBeanScore + 3;
             print(playerBeanScore);
+            redAudio.Play();
+            
+
+
         }
 
       else if (bean.gameObject.tag == "Gold")
@@ -164,6 +199,7 @@ public class BeanSpawn : MonoBehaviour
             Destroy(bean.gameObject);
             playerBeanScore = playerBeanScore + 5;
             print(playerBeanScore);
+            goldAudio.Play();
         }
     }
 }

@@ -34,12 +34,29 @@ public class LightGame : MonoBehaviour
     public bool check8 = false;
     public bool check9 = false;
 
+    public GameObject lightObject;
+    public AudioSource lightAudio;
+
+    public GameObject goldMedObject;
+    public AudioSource goldMedAudio;
+
+    public GameObject silverMedObject;
+    public AudioSource silverMedAudio;
+
+    public GameObject bronzeMedObject;
+    public AudioSource bronzeMedAudio;
+
 
     public void Start()
     {
         myLightGame = FindObjectOfType<LoadingLightGame>();
-        
-    
+        lightAudio = lightObject.GetComponent<AudioSource>();
+
+        bronzeMedAudio = bronzeMedObject.GetComponent<AudioSource>();
+        silverMedAudio = silverMedObject.GetComponent<AudioSource>();
+        goldMedAudio = goldMedObject.GetComponent<AudioSource>();
+
+
     }
 
     public void Update()
@@ -248,14 +265,17 @@ public class LightGame : MonoBehaviour
         if(clicks < 10)
         {
             Medals[0].SetActive(true);
+            goldMedAudio.Play();
         }
         if(clicks > 10 && clicks <=20)
         {
             Medals[1].SetActive(true);
+            silverMedAudio.Play();
         }
         if(clicks > 20)
         {
             Medals[2].SetActive(true);
+            bronzeMedAudio.Play();
         }
         
     }
@@ -269,6 +289,7 @@ public class LightGame : MonoBehaviour
     public void Button1()
     {
         clicks++;
+        lightAudio.Play();
         if(check1== false)
         {
             button1red();
@@ -303,6 +324,7 @@ public class LightGame : MonoBehaviour
     public void Button2()
     {
         clicks++;
+        lightAudio.Play();
         if (check2 == false)
         {
             button2red();
@@ -347,6 +369,7 @@ public class LightGame : MonoBehaviour
     public void Button3()
     {
         clicks++;
+        lightAudio.Play();
         if (check3 ==false)
         {
             button3red();
@@ -381,6 +404,7 @@ public class LightGame : MonoBehaviour
     public void Button4()
     {
         clicks++;
+        lightAudio.Play();
         if (check4 ==false)
         {
             button4red();
@@ -422,6 +446,7 @@ public class LightGame : MonoBehaviour
     public void Button5()
     {
         clicks++;
+        lightAudio.Play();
         if (check5 == false)
         {
             button5red();
@@ -473,6 +498,7 @@ public class LightGame : MonoBehaviour
     public void Button6()
     {
         clicks++;
+        lightAudio.Play();
         if (check6 == false)
         {
             button6red();
@@ -515,6 +541,7 @@ public class LightGame : MonoBehaviour
     public void Button7()
     {
         clicks++;
+        lightAudio.Play();
         if (check7 == false)
         {
             button7red();
@@ -548,6 +575,7 @@ public class LightGame : MonoBehaviour
     public void Button8()
     {
         clicks++;
+        lightAudio.Play();
         if (check8==false)
         {
             button8red();
@@ -589,6 +617,7 @@ public class LightGame : MonoBehaviour
     public void Button9()
     {
         clicks++;
+        lightAudio.Play();
         if (check9 == false)
         {
             button9red();

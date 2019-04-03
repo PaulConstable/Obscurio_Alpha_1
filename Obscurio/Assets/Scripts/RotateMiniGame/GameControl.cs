@@ -21,15 +21,28 @@ public class GameControl : MonoBehaviour {
     BeanGuyTrigger myBeanGuyTrigger;
     PuzzleGame myPuzzleGame;
 
-	// Use this for initialization
-	void Start () {
+    public GameObject goldMedObject;
+    public AudioSource goldMedAudio;
+
+    public GameObject silverMedObject;
+    public AudioSource silverMedAudio;
+
+    public GameObject bronzeMedObject;
+    public AudioSource bronzeMedAudio;
+
+    // Use this for initialization
+    void Start () {
         winText.SetActive(false);
         youWin = false;
         myBeanStalkTrigger = FindObjectOfType<BeanStalkTrigger>();
         myBeanGuyTrigger = FindObjectOfType<BeanGuyTrigger>();
         myPuzzleGame = FindObjectOfType<PuzzleGame>();
-        
-	}
+
+        bronzeMedAudio = bronzeMedObject.GetComponent<AudioSource>();
+        silverMedAudio = silverMedObject.GetComponent<AudioSource>();
+        goldMedAudio = goldMedObject.GetComponent<AudioSource>();
+
+    }
 
 
     // Update is called once per frame
@@ -56,15 +69,21 @@ public class GameControl : MonoBehaviour {
             isOutroScene = true;
             if(myPuzzleGame.timeTaken < 40)
             {
+                goldMedAudio.Play();
                 medals[2].SetActive(true);
+                
             }
             if(myPuzzleGame.timeTaken > 40 && myPuzzleGame.timeTaken < 70)
             {
+                silverMedAudio.Play();
                 medals[1].SetActive(true);
+                
             }
             if(myPuzzleGame.timeTaken >= 70)
             {
+                bronzeMedAudio.Play();
                 medals[0].SetActive(true);
+                
             }
             
         } 

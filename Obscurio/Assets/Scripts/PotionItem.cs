@@ -29,11 +29,16 @@ public class PotionItem : MonoBehaviour {
     public static int buttonsPressed = 0;
 
     public int TimesWrong;
+
+    public GameObject caulObject;
+    public AudioSource caulAudio;
     
 
     // Use this for initialization
     void Start() {
         myPotionManager = FindObjectOfType<PotionManager>();
+
+        caulAudio = caulObject.GetComponent<AudioSource>();
 
         correctPotionStage1 = correctItem1Stage1 + correctItem2Stage1;
         Debug.Log(correctPotionStage1);
@@ -120,6 +125,7 @@ public class PotionItem : MonoBehaviour {
             gameObject.SetActive(false);
             buttonsPressed += 1;
             checkHelp();
+            caulAudio.Play();
         }
     }
 
