@@ -4137,8 +4137,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3abb33466c83309478fd68f844fa429d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvl1Medals: []
-  lvl2Medals: []
+  lvl1Medals:
+  - {fileID: 2008402324}
+  - {fileID: 1349350502}
+  - {fileID: 1181757776}
+  lvl2Medals:
+  - {fileID: 149199607}
+  - {fileID: 994448984}
+  - {fileID: 1722027882}
   BeanMedals:
   - {fileID: 1393929133}
   - {fileID: 759792016}
@@ -4163,6 +4169,8 @@ MonoBehaviour:
   - {fileID: 2103937727}
   - {fileID: 1260232449}
   - {fileID: 462007279}
+  Level1: 0
+  Level2: 0
 --- !u!4 &2003731108
 Transform:
   m_ObjectHideFlags: 0

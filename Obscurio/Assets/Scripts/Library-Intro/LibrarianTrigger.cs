@@ -34,6 +34,20 @@ public class LibrarianTrigger : MonoBehaviour {
             eButton.SetActive(false);
             librarianText = 2;
         }
+        else if (Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && librarianText == 2)
+        {
+            librarianTexts[1].SetActive(false);
+            librarianTexts[2].SetActive(true);
+            eButton.SetActive(false);
+            librarianText = 3;
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && librarianText == 3)
+        {
+            librarianTexts[2].SetActive(false);
+            librarianTexts[3].SetActive(true);
+            eButton.SetActive(false);
+            librarianText = 4;
+        }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
@@ -49,6 +63,14 @@ public class LibrarianTrigger : MonoBehaviour {
         if (collision.gameObject.tag == "Player" && librarianText == 2)
         {
             librarianTexts[1].SetActive(false);
+        }
+        if (collision.gameObject.tag == "Player" && librarianText == 3)
+        {
+            librarianTexts[2].SetActive(false);
+        }
+        if (collision.gameObject.tag == "Player" && librarianText == 4)
+        {
+            librarianTexts[3].SetActive(false);
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LibrarianOutro : MonoBehaviour {
 
@@ -34,6 +35,14 @@ public class LibrarianOutro : MonoBehaviour {
             eButton.SetActive(false);
             librarianText = 2;
         }
+        else if (Input.GetKeyDown(KeyCode.E) && collision.gameObject.tag == "Player" && librarianText == 2)
+        {
+            librarianTexts[1].SetActive(false);
+            eButton.SetActive(false);
+            librarianText = 3;
+            SceneManager.LoadScene("Medal Scene");
+        }
+
     }
 
     public void OnTriggerExit2D(Collider2D collision)
