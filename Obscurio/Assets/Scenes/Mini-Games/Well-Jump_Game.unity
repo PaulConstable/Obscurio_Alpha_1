@@ -170,7 +170,7 @@ Prefab:
         type: 2}
       propertyPath: bounceAudio
       value: 
-      objectReference: {fileID: 1222060280}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ffafb8c0561a8444a8255177d54baef, type: 2}
   m_IsPrefabAsset: 0

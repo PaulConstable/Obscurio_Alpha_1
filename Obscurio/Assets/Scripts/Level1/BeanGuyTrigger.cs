@@ -77,6 +77,7 @@ public class BeanGuyTrigger : MonoBehaviour
             {
                 beanTexts[7].SetActive(false);
                 SceneManager.LoadScene("Puzzle-Game", LoadSceneMode.Additive);
+                PotionCheck = true;
             }
            
             
